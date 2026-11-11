@@ -1,0 +1,1330 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NGG Timepieces Enquiry Letters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Tinos:wght@400;700&family=Noto+Sans+Thai:wght@400;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap">
+<style>
+:root{color-scheme:light}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+:root{
+  --ground:#F3F3F1; --surface:#FFFFFF; --ink:#1C1B1D; --muted:#66656B; --line:#E0DFDB;
+  --field:#FAFAF8; --accent:#A91F2E; --accent-ink:#FFFFFF; --accent-soft:#F6E7E9;
+  --placeholder:#A8A6A1; --ok:#1F7A4D; --warn:#9A6200; --err:#B3261E; --paper-shadow:0 1px 2px rgba(0,0,0,.06),0 8px 28px rgba(0,0,0,.08);
+  --ui:"IBM Plex Sans Thai","Noto Sans Thai",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#141315; --surface:#1E1D20; --ink:#ECEAE7; --muted:#A09EA5; --line:#343237;
+    --field:#18171A; --accent:#D8495B; --accent-ink:#FFFFFF; --accent-soft:#3A1F24;
+    --placeholder:#6E6C71; --ok:#5CC08E; --warn:#E0A84A; --err:#F2837B; --paper-shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.45);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#141315; --surface:#1E1D20; --ink:#ECEAE7; --muted:#A09EA5; --line:#343237;
+  --field:#18171A; --accent:#D8495B; --accent-ink:#FFFFFF; --accent-soft:#3A1F24;
+  --placeholder:#6E6C71; --ok:#5CC08E; --warn:#E0A84A; --err:#F2837B; --paper-shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.45);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font-family:var(--ui);font-size:14px;line-height:1.5;padding-inline:16px;padding-block:20px 40px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;gap:20px}
+header{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header .mark{width:34px;height:34px;background:var(--accent);display:grid;place-items:center;color:var(--accent-ink);font-family:Tinos,serif;font-size:13px;letter-spacing:.02em;flex:none}
+header h1{font-size:19px;font-weight:600;margin:0;text-wrap:balance}
+header p{margin:0;color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:16px}
+.panel h2{font-size:12.5px;font-weight:600;letter-spacing:0;text-transform:uppercase;color:var(--muted);margin:0}
+.section{display:grid;gap:10px}
+.section+.section{border-top:1px solid var(--line);padding-top:16px}
+label.f{display:grid;gap:4px;font-size:12.5px;color:var(--muted);font-weight:500}
+input[type=text],input[type=email],input[type=date],select,textarea{width:100%;font:inherit;font-size:14px;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:7px;padding:8px 10px}
+textarea{min-height:70px;resize:vertical;font-size:13px}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,.drop:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:420px){.row2{grid-template-columns:1fr}}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden;width:max-content;max-width:100%}
+.seg button{font:inherit;font-size:13px;border:0;background:var(--field);color:var(--ink);padding:6px 12px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed=true]{background:var(--accent);color:var(--accent-ink)}
+.hint{font-size:12px;color:var(--muted);margin:0}
+.chip{display:inline-block;font-size:11.5px;padding:1px 8px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+.drop{border:1.5px dashed var(--line);border-radius:9px;padding:14px;display:grid;gap:6px;justify-items:start;cursor:pointer;background:var(--field)}
+.drop.over{border-color:var(--accent);background:var(--accent-soft)}
+.drop strong{font-size:13.5px;font-weight:600}
+.thumb{display:flex;align-items:center;gap:10px}
+.thumb img{width:54px;height:54px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:6px}
+.btn{font:inherit;font-size:14px;font-weight:500;border-radius:8px;padding:9px 14px;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:inline-flex;align-items:center;gap:7px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.small{font-size:12.5px;padding:5px 10px;white-space:nowrap}
+.btn:disabled{opacity:.5;cursor:default}
+#rolexSearch{background:#006039;border-color:#006039;color:#fff}
+#rolexSearch:hover{background:#127749;border-color:#127749}
+#ghOff,#ghManual,#libDrop,#pending{display:none !important}
+.flash{animation:flashbox 1.8s ease-out}
+@keyframes flashbox{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 60%,transparent)}30%{box-shadow:0 0 0 7px color-mix(in srgb,var(--accent) 45%,transparent)}100%{box-shadow:0 0 0 0 transparent}}
+#watchSrc.mm{color:var(--err);font-weight:600;white-space:pre-line}
+#watchDrop.needimg{background:var(--accent-soft);border-color:color-mix(in srgb,var(--accent) 35%,transparent)}
+.actions{display:flex;flex-wrap:wrap;gap:8px}
+.preview{display:grid;gap:12px;justify-items:center;position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px)}
+.paper{width:100%;max-width:600px;background:#fff;box-shadow:var(--paper-shadow)}
+.paper canvas{display:block;width:100%;height:auto}
+.meta{width:100%;max-width:600px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.status{min-height:20px;font-size:13px;width:100%;max-width:600px}
+.status.ok{color:var(--ok)} .status.warn{color:var(--warn)} .status.err{color:var(--err)}
+.match{display:flex;align-items:center;gap:8px;font-size:13px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--muted);flex:none}
+.dot.ok{background:var(--ok)} .dot.warn{background:var(--warn)}
+.lib{gap:14px}
+.libhead{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.libhead h2{margin-bottom:2px}
+input[type=search]{width:100%;max-width:260px;font:inherit;font-size:14px;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:7px;padding:8px 10px}
+.pending{display:grid;gap:8px}
+.pending:empty{display:none}
+.prow{display:grid;grid-template-columns:96px minmax(0,1fr) auto auto auto;gap:10px;align-items:center;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--field)}
+.prow img{width:96px;height:96px;object-fit:contain;background:#fff;border-radius:6px;display:block}
+.pinfo{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.pinfo .fi{grid-column:1/-1;font-size:12px}
+@media (max-width:640px){.pinfo{grid-template-columns:1fr}}
+.zoom{border:0;padding:0;background:none;cursor:zoom-in;border-radius:6px;display:block}
+.zoom:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.shotzoom{justify-self:start}
+.card .ph.zoom{border-radius:0}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(10,10,12,.72);display:grid;place-items:center;padding:16px}
+.lbbox{background:var(--surface);border-radius:10px;max-width:min(900px,100%);max-height:100%;display:grid;grid-template-rows:minmax(0,1fr) auto;overflow:hidden}
+.lbimg{background:#fff;display:grid;place-items:center;padding:12px;min-height:0}
+.lbimg img{max-width:100%;max-height:calc(100vh - 140px);object-fit:contain}
+.lbbar{display:flex;align-items:center;gap:10px;padding:10px 12px;border-top:1px solid var(--line);flex-wrap:wrap}
+.lbbar #lbCap{font-weight:600;font-size:13.5px}
+.lbbar .btn{margin-left:auto}
+.prow .err{grid-column:1/-1;color:var(--err);font-size:12.5px}
+@media (max-width:640px){.prow{grid-template-columns:96px minmax(0,1fr)}}
+.libgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:8px}
+.libgrid:empty{display:none}
+.card{border:1px solid var(--line);border-radius:9px;overflow:hidden;display:grid;grid-template-columns:84px minmax(0,1fr);background:var(--surface)}
+.card.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.card .ph{background:#fff;width:84px;height:84px;display:grid;place-items:center;padding:6px;border-right:1px solid var(--line)}
+.card .ph img{width:72px;height:72px;object-fit:contain;display:block}
+.card .ph{overflow:hidden;align-self:stretch;height:auto;min-height:84px}
+.card .cap{padding:8px 10px;display:grid;gap:4px;align-content:center;min-width:0}
+.card .code{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;word-break:break-all}
+.card .model{font-size:12px;color:var(--muted)}
+.card .model:empty{display:none}
+.card .btns{display:flex;gap:6px;flex-wrap:wrap}
+.btn.danger{color:var(--err)}
+.checks{width:100%;max-width:600px;border:1px solid var(--line);border-radius:9px;background:var(--surface);overflow:hidden}
+.checks .hd{display:flex;align-items:center;gap:8px;padding:9px 12px;font-size:13px;font-weight:600}
+.checks .hd .dot{width:9px;height:9px}
+.checks ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.checks li{display:flex;align-items:flex-start;gap:9px;padding:8px 12px;font-size:13px}
+.checks li+li{border-top:1px solid var(--line)}
+.checks li .dot{margin-top:6px}
+.checks li .tx{flex:1;min-width:0}
+.checks li .tx b{font-weight:600}
+.checks.bad{border-color:var(--err)}
+.checks.warnonly{border-color:var(--warn)}
+.dot.err{background:var(--err)}
+input.bad{border-color:var(--err)} input.warn{border-color:var(--warn)}
+.shotprev{max-height:120px;width:auto;max-width:100%;border:1px solid var(--line);border-radius:6px;justify-self:start;background:#fff}
+.shotstatus{font-size:13px;padding:8px 10px;border-radius:7px;background:var(--field);border:1px solid var(--line)}
+.shotstatus.ok{color:var(--ok);border-color:var(--ok)} .shotstatus.warn{color:var(--warn);border-color:var(--warn)} .shotstatus.err{color:var(--err);border-color:var(--err)}
+.othersales{display:grid;gap:8px}
+input.needfill{background:var(--accent-soft);border-color:var(--accent)}
+input::placeholder,textarea::placeholder{color:var(--placeholder);opacity:1}
+.needhint{color:var(--accent);margin:0}
+.visitrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.visitrow input[type=date]{flex:1;min-width:150px;width:auto}
+.h2row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.h2row .btn{margin-left:auto}
+.addhow{border:1px solid var(--line);border-radius:9px;padding:12px 14px;background:var(--field);font-size:13px}
+.addhow ol{margin:6px 0 0;padding-left:20px;display:grid;gap:4px}
+.addhow a{color:var(--accent);font-weight:600}
+.spinner{width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp .8s linear infinite;display:inline-block;vertical-align:-2px}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spinner{animation:none}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark" aria-hidden="true">NGG</div>
+    <div>
+      <h1>NGG Enquiry Letters</h1>
+      <p>จดหมายขอบคุณลูกค้าที่ลงทะเบียนรุ่นนาฬิกา · ชื่อไทยใช้ฉบับไทย ชื่ออังกฤษใช้ฉบับอังกฤษ</p>
+    </div>
+  </header>
+
+  <div class="grid">
+    <form class="panel" id="form" autocomplete="off">
+      <div class="section" id="readSection">
+        <h2>1 · ดึงข้อมูลจากฟอร์ม</h2>
+        <div class="drop" id="shotDrop" tabindex="0" role="button" aria-label="อัปโหลดภาพหน้าจอข้อมูลลูกค้า">
+          <strong>แคปหน้าจอข้อมูลลูกค้า แล้วกด ⌘ + V (Mac) หรือ Ctrl + V (Windows)</strong>
+          <span class="hint" id="shotHint">หรือลากไฟล์รูปมาวาง / คลิกเพื่อเลือกไฟล์ · ระบบจะอ่านชื่อ อีเมล รุ่น รหัส และพนักงานขายให้ (ตรวจชื่อภาษาไทยอีกครั้ง)</span>
+        </div>
+        <input type="file" id="shotFile" accept="image/*,.avif" hidden>
+        <button type="button" class="zoom shotzoom" id="shotZoom" title="ดูรูปขนาดใหญ่" hidden><img id="shotPreview" class="shotprev" alt="ภาพหน้าจอที่วาง"></button>
+        <div class="shotstatus" id="shotStatus" role="status" aria-live="polite" hidden></div>
+        <details>
+          <summary class="hint" style="cursor:pointer">หรือวางข้อความจากฟอร์ม / อีเมลแจ้งเตือน</summary>
+          <textarea id="pasteText" placeholder="Name / ชื่อ-นามสกุล&#10;Vongphouthone Sichanthalath&#10;Email / อีเมล&#10;..."></textarea>
+          <button type="button" class="btn small" id="parseBtn">อ่านข้อความ</button>
+        </details>
+      </div>
+
+      <div class="section">
+        <div class="h2row"><h2>2 · ตรวจข้อมูล</h2><span class="chip" id="sampleChip" hidden>ข้อมูลตัวอย่าง</span><button type="button" class="btn small" id="resetBtn">ล้างข้อมูล เริ่มใหม่</button></div>
+        <label class="f">ชื่อลูกค้า / Name
+          <input type="text" id="name" placeholder="โปรดระบุชื่อ-นามสกุลลูกค้า">
+        </label>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <div class="seg" role="group" aria-label="ภาษาจดหมาย">
+            <button type="button" data-lang="auto" aria-pressed="true">อัตโนมัติ</button>
+            <button type="button" data-lang="en" aria-pressed="false">English</button>
+            <button type="button" data-lang="th" aria-pressed="false">ไทย</button>
+          </div>
+          <span class="hint" id="langHint"></span>
+        </div>
+        <label class="f">รุ่นที่สนใจ / Model of Interest
+          <input type="text" id="model" placeholder="โปรดระบุรุ่น เช่น DATEJUST 36">
+        </label>
+        <label class="f">รหัสนาฬิกา / Reference
+          <div style="display:flex;gap:6px">
+            <input type="text" id="ref" placeholder="โปรดระบุรหัส เช่น M126284RBR-0051">
+            <button type="button" class="btn small" id="rolexSearch" title="เปิด Google ค้นหาหน้ารุ่นนี้บน rolex.com (เปิดในแท็บใหม่)">🔍 ค้นหาบน rolex.com</button>
+          </div>
+        </label>
+        <label class="f">พนักงานขาย
+          <select id="sales"></select>
+        </label>
+        <div id="otherSales" class="othersales" hidden>
+          <label class="f"><span id="salesNameLabel">ชื่อ-นามสกุลพนักงานขาย</span><input type="text" id="salesName"></label>
+        </div>
+        <div class="f" id="dateWrap">
+          <span>ช่องทางและวันที่ (แสดงในฉบับอังกฤษ)</span>
+          <div class="visitrow">
+            <div class="seg" role="group" aria-label="ลูกค้าเยี่ยมชมหน้าร้านหรือติดต่อมา">
+              <button type="button" data-visit="visiting" aria-pressed="true">เยี่ยมชมหน้าร้าน</button>
+              <button type="button" data-visit="contacting" aria-pressed="false">ติดต่อมา</button>
+            </div>
+            <input type="date" id="date" aria-label="วันที่">
+          </div>
+          <span class="hint" id="visitHint"></span>
+        </div>
+        <label class="f">อีเมลลูกค้า
+          <div style="display:flex;gap:6px">
+            <input type="email" id="email" inputmode="email" spellcheck="false" placeholder="โปรดระบุอีเมล เช่น name@gmail.com">
+            <button type="button" class="btn small" id="copyEmail">คัดลอก</button>
+          </div>
+        </label>
+        <label class="f">เบอร์โทร
+          <input type="text" id="mobile" inputmode="tel" placeholder="โปรดระบุเบอร์โทร เช่น +66812345678 (ไม่บังคับ)">
+        </label>
+      </div>
+
+      <div class="section">
+        <h2>3 · รูปนาฬิกา</h2>
+        <div class="match" id="matchBox">
+          <span class="dot" id="matchDot"></span><span id="matchText">กำลังเปิดคลังรูป…</span>
+          <button type="button" class="btn small" id="watchUse" hidden>ใส่รูปกลับ</button>
+        </div>
+        <div class="thumb" id="watchThumb" hidden>
+          <button type="button" class="zoom" id="watchZoom" title="ดูรูปขนาดใหญ่"><img id="watchImg" alt="รูปนาฬิกาที่ใช้ในจดหมาย"></button>
+          <div style="display:grid;gap:2px"><strong id="watchLabel" style="font-size:13px"></strong><span class="hint" id="watchSrc"></span></div>
+          <button type="button" class="btn small" id="watchClear">ไม่ใส่รูป</button>
+        </div>
+        <div class="drop" id="watchDrop" tabindex="0" role="button" aria-label="อัปโหลดรูปนาฬิกาสำหรับจดหมายนี้">
+          <strong>อัปโหลดรูปสำหรับรหัสนี้</strong>
+          <span class="hint" id="watchDropHint">ลากรูปมาวางหรือคลิกเพื่อเลือก · รูปจะถูกบันทึกเข้าคลังด้วยรหัสในช่อง Reference</span>
+        </div>
+        <input type="file" id="watchFile" accept="image/png,image/jpeg,image/webp,image/avif,.avif" hidden>
+      </div>
+    </form>
+
+    <div class="preview">
+      <div class="paper"><canvas id="cv" width="600" height="814" aria-label="ตัวอย่างจดหมาย"></canvas></div>
+      <div class="meta"><span id="sizeInfo">600 × 814 px · ส่งออกละเอียด 4 เท่า (2400 × 3256)</span><span id="fileName"></span></div>
+      <div class="checks" id="checks" aria-live="polite"></div>
+      <div class="actions">
+        <button type="button" class="btn primary" id="dlPng">ดาวน์โหลด PNG</button>
+        <button type="button" class="btn" id="dlPdf">ดาวน์โหลด PDF</button>
+        <button type="button" class="btn" id="copyImg">คัดลอกรูปไปวางในอีเมล</button>
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="panel lib" id="library" aria-labelledby="libTitle">
+    <div class="libhead">
+      <div>
+        <h2 id="libTitle">คลังรูปนาฬิกา · Watch images</h2>
+        <p class="hint" id="libCount">รูปที่มีอยู่ในคลัง ระบบจับคู่กับรหัสนาฬิกา (Reference) ให้อัตโนมัติ</p>
+      </div>
+      <input type="search" id="libSearch" placeholder="ค้นหารหัสหรือรุ่น" aria-label="ค้นหาในคลังรูป">
+    </div>
+    <div class="addhow" id="ghOn" hidden>
+      <strong>✓ เชื่อมต่อ GitHub แล้ว</strong> · ลากรูปมาวาง ใส่รหัส/รุ่น แล้วกด <b>บันทึก</b> รูปจะเข้าคลังทันที
+      <button type="button" class="btn small" id="ghOut" style="margin-left:8px">ยกเลิกการเชื่อมต่อ</button>
+    </div>
+    <div class="addhow" id="ghOff">
+      <strong>บันทึกรูปเข้าคลังได้ในคลิกเดียว: เชื่อมต่อ GitHub (ทำครั้งเดียวต่อเครื่อง)</strong>
+      <ol>
+        <li>เปิด <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">หน้าสร้าง token ↗</a> (ล็อกอินบัญชี nggtimepieces) · Token name: <b>enquiry-letters</b> · Expiration: เลือกนานสุดที่ต้องการ</li>
+        <li>Repository access: <b>Only select repositories</b> → เลือก <b>enquiry-letters</b> · Permissions → Repository permissions → <b>Contents: Read and write</b> → <b>Generate token</b></li>
+        <li>คัดลอก token มาวางช่องนี้ แล้วกด <b>เชื่อมต่อ</b></li>
+      </ol>
+      <div style="display:flex;gap:6px;margin-top:8px;max-width:520px"><input type="password" id="ghToken" placeholder="github_pat_…" autocomplete="off" style="flex:1"><button type="button" class="btn small primary" id="ghSave">เชื่อมต่อ</button></div>
+      <p class="hint" style="margin-top:6px">token เก็บไว้ในเบราว์เซอร์เครื่องนี้เท่านั้น · เครื่องที่ไม่ได้เชื่อมต่อยังใช้รูปในคลังได้ตามปกติ</p>
+    </div>
+    <div class="addhow" id="ghManual" hidden>
+      <strong>เพิ่มรูปเข้าคลังแบบไม่เชื่อมต่อ (2 ขั้นตอน)</strong>
+      <ol>
+        <li>ลากรูปมาวางในกรอบด้านล่าง ใส่รหัสและรุ่น แล้วกด <b>เตรียมไฟล์</b> ระบบจะตัดขอบ ตั้งชื่อไฟล์ให้ถูก และดาวน์โหลดให้</li>
+        <li>อัปโหลดไฟล์นั้นเข้าโฟลเดอร์ <b>watches</b> บน GitHub <a id="ghUpload" href="#" target="_blank" rel="noopener">เปิดหน้าอัปโหลด ↗</a> แล้วกด Commit changes · รอประมาณ 1 นาที แล้วรีโหลดหน้านี้</li>
+      </ol>
+    </div>
+    <div class="drop" id="libDrop" tabindex="0" role="button" aria-label="เลือกรูปนาฬิกาเพื่อเตรียมไฟล์">
+      <strong>ลากรูปนาฬิกามาวาง หรือคลิกเพื่อเลือก (เลือกได้หลายรูป)</strong>
+      <span class="hint">รองรับ PNG, JPG, WEBP, AVIF · ถ้าชื่อไฟล์เป็นรหัสอยู่แล้ว ระบบจะอ่านรหัสให้</span>
+    </div>
+    <input type="file" id="libFile" accept="image/png,image/jpeg,image/webp,image/avif,.avif" multiple hidden>
+    <div id="pending" class="pending"></div>
+    <div id="libGrid" class="libgrid"></div>
+    <p class="hint" id="libEmpty" hidden>ยังไม่มีรูปในคลัง</p>
+  </section>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lbCap">
+  <div class="lbbox">
+    <div class="lbimg"><img id="lbImg" alt=""></div>
+    <div class="lbbar"><span id="lbCap"></span><span class="hint" id="lbSize"></span><button type="button" class="btn small" id="lbClose">ปิด (Esc)</button></div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const LOGO_SRC = "data:image/png;base64,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";
+const SALESPEOPLE = [
+  {en:"Anurak Pawong (Parewa)", th:"อนุรักษ์ ปาวงค์ (แพร)"},
+  {en:"Narissara Lawilai (Fon)", th:"นริศรา ลาวิลัย (ฝน)"},
+  {en:"Krittiya Boonyakittirit (Joy)", th:"กฤติญา บุญญกิตติฤทธิ์ (จอย)"},
+];
+// Layout measured from the Canva templates (600 × 814 px). y = text baseline.
+const F = {sans:'Arimo, "Liberation Sans", Arial, sans-serif', th:'Tinos, "Noto Sans Thai", "Times New Roman", serif', thsans:'"Noto Sans Thai", Arimo, sans-serif'};
+const $ = id => document.getElementById(id);
+const TH_PT11 = 11 * 96 / 72;   // Thai letter: every line 11 pt (14.67 px on the 600 × 814 px page)
+const S = {lang:"auto", watch:null, logo:null, visit:"visiting"};
+const isThaiText = s => /[฀-๿]/.test(s||"");
+
+function fmtDateEN(v){
+  const d = v ? new Date(v+"T00:00:00") : new Date();
+  const m = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  return `${d.getDate()} ${m[d.getMonth()]}, ${d.getFullYear()}`;
+}
+function salesNames(){
+  const v = $("sales").value;
+  if (v === "other"){ const n = splitNote($("salesName").value).name; return {en:n, th:n}; }   // one name, written in the letter's language
+  return SALESPEOPLE[+v] || {en:"",th:""};
+}
+function currentLang(){
+  if (S.lang !== "auto") return S.lang;
+  return isThaiText($("name").value) ? "th" : "en";
+}
+function data(){
+  const s = salesNames();
+  return {
+    name: $("name").value.trim().replace(/^คุณ\s*/,""),
+    model: $("model").value.trim(), ref: $("ref").value.trim(),
+    date: fmtDateEN($("date").value), visit: S.visit, salesEn: s.en, salesTh: s.th,
+  };
+}
+function lines(lang, d){
+  const r = (t, o={}) => Object.assign({t}, o);
+  const bullet = r("•", {s:10, dy:-1, w:13});
+  if (lang === "en") return {
+    img:{x:100,y:331,w:400,h:152}, rule:{y:760,x0:35,x1:563},
+    L:[
+      {x:37,y:177,s:15.6,runs:[r(`Dear ${d.name||"[Client]"},`,{b:1})]},
+      {x:37,y:213,runs:[r(`Thank you for ${d.visit} NGG Timepieces boutique on ${d.date}.`)]},
+      {x:37,y:231,runs:[r("We hope you are satisfied with our service.")]},
+      {x:37,y:267,runs:[r("As your request, I have registered your enquiries for the watch model(s)")]},
+      {x:37,y:285,runs:[r("as following:")]},
+      {x:48,y:321,runs:[bullet, r(`${d.model||"[COLLECTION]"} reference ${d.ref||"(Model)"}`,{b:1})]},
+      {x:37,y:501,runs:[r("In the meantime, feel free to explore our website at www.nggtimepieces.com")]},
+      {x:37,y:520,runs:[r("or visit www.rolex.com to discover more Rolex watches.")]},
+      {x:37,y:555,runs:[r("To schedule an appointment or if you have any inquiries,")]},
+      {x:37,y:573,runs:[r("please feel free to contact us at (+66) 42921339 or reply to this email.")]},
+      {x:37,y:609,runs:[r("We are delighted to assist you with all of your enquiries.")]},
+      {x:37,y:645,runs:[r("Thank you very much, and I look forward to seeing you again at NGG Timepieces.")]},
+      {x:37,y:695,runs:[r(d.salesEn||"Salesperson Name",{b:1})]},
+      {x:37,y:712,runs:[r("Sales Assistant")]},
+      {x:37,y:729,runs:[r("NGG Timepieces Central Udon")]},
+    ].map(l=>({s:14.6,f:"sans",...l}))
+  };
+  return {
+    img:{x:100,y:283,w:400,h:166}, rule:{y:777,x0:35,x1:564},
+    L:[
+      {x:37,y:153,f:"thsans",runs:[r(`เรียน คุณ ${d.name||"[ชื่อลูกค้า]"},`,{b:1})]},
+      {x:37,y:193,runs:[r("ขอขอบพระคุณที่ท่านได้ให้ความไว้วางใจ NGG Timepieces เราหวังเป็นอย่างยิ่งว่า")]},
+      {x:37,y:212,runs:[r("ท่านจะพึงพอใจกับการบริการของเรา")]},
+      {x:37,y:252,runs:[r("เราได้ดำเนินการบันทึกข้อมูลรายชื่อ ในนาฬิการุ่นที่ท่านให้ความสนใจดังนี้:")]},
+      {x:48,y:273,runs:[bullet, r(`${d.model||"[COLLECTION]"} รหัสอ้างอิง ${d.ref||"(MODEL)"}`,{b:1})]},
+      {x:37,y:472,runs:[r("ในระหว่างที่รอการตอบกลับเพิ่มเติมจากเรา ท่านสามารถเยี่ยมชมเว็บไซต์ของเราได้ที่")]},
+      {x:37,y:492,runs:[r("www.nggtimepieces.com",{u:1}),r(" หรือเว็บไซต์ "),r("www.rolex.com",{u:1}),r(" เพื่อค้นพบคอลเลกชันนาฬิกา Rolex")]},
+      {x:37,y:512,runs:[r("ที่หลากหลายและน่าสนใจ")]},
+      {x:37,y:552,runs:[r("หากท่านต้องการนัดหมายหรือมีข้อสงสัยเพิ่มเติม ทีมงานของเรายินดีให้บริการเสมอ")]},
+      {x:37,y:572,runs:[r("กรุณาติดต่อหมายเลขโทรศัพท์ (+66) 42921339 หรือส่งอีเมลตอบกลับมายังที่อยู่นี้")]},
+      {x:37,y:613,runs:[r("ทางเรารู้สึกเป็นเกียรติอย่างยิ่งที่ได้ดูแลท่าน และหวังว่าจะได้มีโอกาสต้อนรับท่านอีกครั้ง")]},
+      {x:37,y:672,runs:[r("ขอแสดงความนับถือ")]},
+      {x:37,y:706,f:"thsans",runs:[r(d.salesTh||"ชื่อพนักงานขาย",{b:1})]},
+      {x:37,y:727,f:"thsans",runs:[r("พนักงานขาย")]},
+      {x:37,y:747,f:"thsans",runs:[r("เอ็นจีจี ไทม์พีซ เซ็นทรัล อุดร")]},
+    ].map(l=>({s:TH_PT11,f:"th",...l}))
+  };
+}
+
+function draw(ctx, scale, forExport){
+  const lang = currentLang(), d = data(), P = lines(lang, d);
+  ctx.setTransform(scale,0,0,scale,0,0);
+  ctx.fillStyle = "#fff"; ctx.fillRect(0,0,600,814);
+  if (S.logo) { ctx.imageSmoothingQuality = "high"; ctx.drawImage(S.logo, 205, 47, 71*S.logo.width/S.logo.height, 71); }
+  ctx.fillStyle = "#000"; ctx.textBaseline = "alphabetic";
+  for (const l of P.L){
+    const font = (run, k=1) => `${run.b?700:400} ${(run.s||l.s)*k}px ${F[l.f]}`;
+    let total = 0; for (const run of l.runs){ ctx.font = font(run); total += run.w || ctx.measureText(run.t).width; }
+    const k = Math.min(1, (600 - 20 - l.x) / total);   // shrink long names so nothing leaves the page
+    let x = l.x;
+    for (const run of l.runs){
+      ctx.font = font(run, run.s ? 1 : k);
+      const w = run.w || ctx.measureText(run.t).width * 1;
+      ctx.fillText(run.t, x, l.y + (run.dy||0));
+      if (run.u) ctx.fillRect(x, l.y + 2, w, 0.9);
+      x += run.w || w;
+    }
+  }
+  ctx.fillRect(P.rule.x0, P.rule.y, P.rule.x1 - P.rule.x0, 2);
+  const b = P.img;
+  if (S.watch){
+    const r = Math.min(b.w / S.watch.width, b.h / S.watch.height);
+    const w = S.watch.width*r, h = S.watch.height*r;
+    ctx.imageSmoothingQuality = "high";
+    ctx.drawImage(S.watch, b.x + (b.w-w)/2, b.y + (b.h-h)/2, w, h);
+  } else if (!forExport){
+    ctx.save(); ctx.strokeStyle = "#C9C7C2"; ctx.setLineDash([5,4]); ctx.lineWidth = 1;
+    ctx.strokeRect(b.x+.5, b.y+.5, b.w-1, b.h-1);
+    ctx.fillStyle = "#9A9893"; ctx.font = `13px ${F.thsans}`; ctx.textAlign = "center";
+    ctx.fillText(lang==="th" ? "รูปนาฬิกา (ไม่แสดงในไฟล์ถ้าไม่ใส่รูป)" : "Watch image (left blank if none)", 300, b.y + b.h/2 + 4);
+    ctx.restore();
+  }
+}
+
+const cv = $("cv");
+function render(){
+  const dpr = Math.min(3, Math.max(2, window.devicePixelRatio||1));
+  cv.width = 600*dpr; cv.height = 814*dpr;
+  draw(cv.getContext("2d"), dpr, false);
+  const lang = currentLang();
+  $("langHint").textContent = S.lang === "auto" ? `ใช้ฉบับ${lang==="th"?"ไทย":"อังกฤษ"} (ตามชื่อ)` : "";
+  $("dateWrap").hidden = lang !== "en";
+  $("salesNameLabel").textContent = lang === "th" ? "ชื่อ-นามสกุลพนักงานขาย (ภาษาไทย)" : "ชื่อ-นามสกุลพนักงานขาย (ภาษาอังกฤษ)";
+  $("salesName").placeholder = lang === "th" ? "โปรดระบุชื่อ-นามสกุลภาษาไทย" : "Please enter full name in English";
+  $("fileName").textContent = baseName() + ".png";
+  S.armed = null; renderChecks();
+}
+
+// ---------- checks: catch typos and missing data before the letter goes out ----------
+const DOMAINS = ["gmail.com","hotmail.com","outlook.com","yahoo.com","icloud.com","live.com","me.com","msn.com","hotmail.co.th","yahoo.co.th","outlook.co.th","windowslive.com","googlemail.com","ymail.com","mail.com","aol.com","gmx.com","proton.me","protonmail.com","nggtimepieces.com"];
+const COLLECTIONS = ["DATEJUST","LADY-DATEJUST","DAY-DATE","SUBMARINER","SUBMARINER DATE","GMT-MASTER II","COSMOGRAPH DAYTONA","DAYTONA","OYSTER PERPETUAL","EXPLORER","EXPLORER II","SEA-DWELLER","DEEPSEA","YACHT-MASTER","YACHT-MASTER II","SKY-DWELLER","AIR-KING","1908","LAND-DWELLER","PERPETUAL 1908"];
+function lev(a,b){ const m=a.length,n=b.length; if(!m) return n; if(!n) return m; let p=[...Array(n+1).keys()];
+  for(let i=1;i<=m;i++){ const c=[i]; for(let j=1;j<=n;j++) c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1)); p=c; } return p[n]; }
+const titleCase = s => s.toLowerCase().replace(/(^|[\s\-'])(\p{L})/gu, (m,a,b) => a + b.toUpperCase());
+function setField(id, v){ const el = $(id); el.value = v; el.dispatchEvent(new Event("input", {bubbles:true})); }
+
+function checkData(){
+  const I = [], add = (lvl, field, msg, fix) => I.push({lvl, field, msg, fix});
+  const name = $("name").value.trim(), email = $("email").value, model = $("model").value.trim(),
+        ref = $("ref").value, mobile = $("mobile").value.trim(), lang = currentLang();
+
+  // customer name
+  if (!name) add("err","name","ยังไม่มี<b>ชื่อลูกค้า</b>");
+  else {
+    if (name.includes("@")) add("err","name","ช่องชื่อดูเหมือนเป็นอีเมล ตรวจว่าใส่สลับช่องหรือไม่");
+    if (/\d/.test(name)) add("warn","name","ชื่อลูกค้ามีตัวเลข ตรวจว่าพิมพ์ถูกหรือไม่");
+    if (/[()\[\]]/.test(name)) { const c = splitNote(name).name; add("warn","name",`ชื่อลูกค้ามีวงเล็บ ข้อความในวงเล็บจะแสดงในจดหมายด้วย`, {label:`ใช้ “${c}”`, fn:()=>setField("name", c)}); }
+    if (!isThaiText(name) && /[a-z]/i.test(name) && (name === name.toLowerCase() || (name === name.toUpperCase() && name.replace(/[^A-Z]/g,"").length > 3)))
+      add("info","name",`ชื่อเป็นตัวพิมพ์${name === name.toLowerCase() ? "เล็ก" : "ใหญ่"}ทั้งหมด`, {label:`ใช้ “${titleCase(name)}”`, fn:()=>setField("name", titleCase(name))});
+    if (isThaiText(name) && /[a-z]{2,}/i.test(name)) add("info","name","ชื่อมีทั้งภาษาไทยและอังกฤษ ระบบใช้ฉบับไทย · เปลี่ยนภาษาได้ที่ปุ่มด้านบน");
+    if (S.lang !== "auto" && (S.lang === "th") !== isThaiText(name)) add("warn","name",`ชื่อเป็นภาษา${isThaiText(name)?"ไทย":"อังกฤษ"} แต่เลือกจดหมายฉบับ${S.lang==="th"?"ไทย":"อังกฤษ"}`, {label:"ใช้ภาษาตามชื่อ", fn:()=>{ S.lang="auto"; syncSeg(); render(); }});
+  }
+
+  // email
+  const e = email.trim();
+  if (!e) add("err","email","ยังไม่มี<b>อีเมลลูกค้า</b>");
+  else {
+    let fixed = e.replace(/\s+/g,"").replace(/^mailto:/i,"").replace(/[,;]+$/,"").replace(/\.+$/,"");
+    const parts = fixed.split("@");
+    if (parts.length !== 2 || !parts[0] || !parts[1]) add("err","email", parts.length > 2 ? "อีเมลมี @ มากกว่าหนึ่งตัว" : "อีเมลไม่ครบ ต้องมีรูปแบบ ชื่อ@โดเมน เช่น name@gmail.com");
+    else {
+      let [local, dom] = parts; dom = dom.toLowerCase().replace(/,/g,".").replace(/\.{2,}/g,".");
+      dom = dom.replace(/\.(con|cpm|cmo|comm|vom|xom|om|cm|co m)$/,".com").replace(/\.co\.tn$/,".co.th");
+      if (!/\./.test(dom)) add("err","email",`โดเมนอีเมลไม่ครบ (“${parts[1]}”) เช่น gmail.com`);
+      else {
+        let best = null, bd = 9;
+        for (const d of DOMAINS){ const x = lev(dom, d); if (x < bd){ bd = x; best = d; } }
+        if (bd > 0 && bd <= (dom.length > 8 ? 2 : 1) && dom.length > 5) dom = best; else if (bd > 2 || dom.length <= 5) bd = 9;
+        const out = local + "@" + dom;
+        if (out !== e) add(bd > 0 && bd <= 2 || out.toLowerCase() !== e.toLowerCase() ? "warn" : "info", "email",
+          `อีเมลอาจพิมพ์ผิด: <b>${escapeHTML(e)}</b>`, {label:`แก้เป็น ${out}`, fn:()=>setField("email", out)});
+        else if (/[^a-z0-9._%+\-]/i.test(local)) add("warn","email","ชื่อหน้า @ มีตัวอักษรที่อีเมลไม่ใช้ ตรวจอีกครั้ง");
+      }
+    }
+  }
+
+  // model
+  if (!model) add("err","model","ยังไม่มี<b>รุ่นที่สนใจ</b> (Model of Interest)");
+  else {
+    const txt = model.toUpperCase().replace(/\b\d{2}\s*(MM)?\b/g,"").replace(/\s+/g," ").trim();
+    const flat = t => t.replace(/[^A-Z0-9]/g,"");
+    if (txt && !COLLECTIONS.some(c => flat(c) === flat(txt))){
+      let best = null, bd = 9; for (const c of COLLECTIONS){ const x = lev(flat(txt), flat(c)); if (x < bd){ bd = x; best = c; } }
+      if (best && bd <= 2){ const fixed = model.toUpperCase().replace(txt, best); add("warn","model",`รุ่น “${escapeHTML(model)}” อาจสะกดผิด`, {label:`แก้เป็น ${fixed}`, fn:()=>setField("model", fixed)}); }
+      else add("info","model",`ไม่รู้จักชื่อรุ่น “${escapeHTML(model)}” ตรวจการสะกดอีกครั้ง`);
+    }
+  }
+
+  // reference code
+  const r = ref.trim();
+  if (!r) add("err","ref","ยังไม่มี<b>รหัสนาฬิกา</b> (Reference)");
+  else {
+    const RX = /^M?\d{5,6}[A-Z]{0,6}-\d{4}$/;
+    let c = r.toUpperCase().replace(/\s+/g,"").replace(/[–—_]/g,"-");
+    const m = c.match(/^(M?\d{5,6}[A-Z]{0,6})-?([0-9OIL]{4})$/);
+    if (m) c = m[1] + "-" + m[2].replace(/O/g,"0").replace(/[IL]/g,"1");
+    if (RX.test(c) && c !== r) add("warn","ref",`รหัสนาฬิกาอาจพิมพ์ผิด: <b>${escapeHTML(r)}</b>`, {label:`แก้เป็น ${c}`, fn:()=>setField("ref", c)});
+    else if (!RX.test(c)) add("warn","ref",`รูปแบบรหัส “${escapeHTML(r)}” ไม่ตรงกับรหัส Rolex (เช่น M126284RBR-0051)`);
+  }
+
+  // mobile (not on the letter, but used to contact the client)
+  if (mobile){
+    const d = mobile.replace(/[^\d+]/g,""), digits = d.replace(/\D/g,"");
+    if (/^\+?660\d{9}$/.test(d)){ const f = "+66" + d.replace(/^\+?660/,""); add("warn","mobile","เบอร์โทรมี 0 เกินหลัง +66", {label:`แก้เป็น ${f}`, fn:()=>setField("mobile", f)}); }
+    else if (/^\+?66/.test(d) && digits.length !== 11) add("warn","mobile",`เบอร์ไทย (+66) ควรมี 9 หลักหลังรหัสประเทศ ตอนนี้มี ${digits.length-2} หลัก`);
+    else if (/^0/.test(d) && !/^0\d{8,9}$/.test(d)) add("warn","mobile",`เบอร์ที่ขึ้นต้นด้วย 0 ควรมี 9–10 หลัก ตอนนี้มี ${digits.length} หลัก`);
+    else if (digits.length < 8 || digits.length > 15) add("warn","mobile","จำนวนหลักเบอร์โทรไม่ถูกต้อง");
+  }
+
+  // salesperson
+  const sv = $("sales").value;
+  if (sv === "other"){
+    const sn = $("salesName").value.trim();
+    if (!sn) add("err","salesName","ยังไม่มี<b>ชื่อพนักงานขาย</b>");
+    else if (lang === "th" && !isThaiText(sn)) add("warn","salesName","จดหมายฉบับไทย ควรกรอกชื่อพนักงานขายเป็นภาษาไทย");
+    else if (lang === "en" && isThaiText(sn)) add("warn","salesName","จดหมายฉบับอังกฤษ ควรกรอกชื่อพนักงานขายเป็นภาษาอังกฤษ");
+    const notes = splitNote(sn).notes;
+    if (notes.length) add("info","salesName",`ตัดหมายเหตุ “${escapeHTML(notes.join(", "))}” ออก ในจดหมายแสดงเฉพาะชื่อพนักงานขาย`);
+  } else if (S.salesRaw){
+    const sp = splitNote(S.salesRaw), picked = SALESPEOPLE[+sv];
+    if (sp.notes.length && picked && matchSales(S.salesRaw) === +sv && !(picked.en+" "+picked.th).toLowerCase().includes(sp.notes[0].toLowerCase()))
+      add("info","sales",`ในฟอร์มเขียนว่า “${escapeHTML(S.salesRaw)}” · ตัดหมายเหตุ “${escapeHTML(sp.notes.join(", "))}” ออก ในจดหมายแสดงเป็น ${escapeHTML(lang==="th"?picked.th:picked.en)}`);
+  }
+
+  // visit date (English letter only)
+  if (lang === "en"){
+    const v = $("date").value;
+    if (!v) add("info","date","ไม่ได้ใส่วันที่ ระบบใช้วันนี้");
+    else {
+      const days = Math.round((new Date(v+"T00:00:00") - new Date(new Date().toDateString())) / 864e5);
+      if (days > 0) add("warn","date","วันที่อยู่ในอนาคต");
+      else if (days < -60) add("warn","date",`วันที่ผ่านมาแล้ว ${-days} วัน ตรวจว่าถูกต้องหรือไม่`);
+    }
+  }
+
+  // watch image
+  if (!S.watch && !L.off.has(normKey(ref))){ add("warn","ref","ยังไม่มี<b>รูปนาฬิกา</b> ในจดหมาย · อัปโหลดในข้อ 3 หรือกด “ไม่ใส่รูป” ถ้าตั้งใจไม่ใส่"); I[I.length-1].quiet = true; }
+  else if (S.watch && imgMismatch(normKey(ref))){
+    const esc = x => String(x).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+    add("err","ref",`<b>รูปนาฬิกาไม่ตรงกับรหัส</b> · ชื่อไฟล์รูปเป็นรหัส ${esc(imgMismatch(normKey(ref)))} แต่รหัสนาฬิกา / รหัสอ้างอิงในจดหมายคือ ${esc(ref)} · ตรวจสอบรูปก่อนส่ง`); I[I.length-1].noMark = true; I[I.length-1].goto = "watchDrop";
+  }
+  return I;
+}
+function escapeHTML(t){ return String(t).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+function jumpTo(el){
+  if (!el) return;
+  el.scrollIntoView({block:"center", behavior:"smooth"});
+  el.focus({preventScroll:true});
+  el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+  setTimeout(() => el.classList.remove("flash"), 1900);
+}
+function renderChecks(){
+  const I = checkData(), box = $("checks");
+  const errs = I.filter(i=>i.lvl==="err").length, warns = I.filter(i=>i.lvl==="warn").length;
+  S.issueCount = errs + warns;
+  document.querySelectorAll("input.bad,input.warn,select.bad").forEach(el => el.classList.remove("bad","warn"));
+  const REQUIRED = {name:"ชื่อลูกค้า", email:"อีเมลลูกค้า", model:"รุ่นที่สนใจ", ref:"รหัสนาฬิกา"};
+  const missing = Object.keys(REQUIRED).filter(id => !$(id).value.trim());
+  Object.keys(REQUIRED).forEach(id => $(id).classList.toggle("needfill", missing.includes(id)));
+  for (const i of I){ const el = $(i.field); if (el && !i.quiet && !i.noMark && i.lvl !== "info" && !el.classList.contains("bad")) el.classList.add(i.lvl === "err" ? "bad" : "warn"); }
+  $("watchDrop").classList.toggle("needimg", I.some(i => i.quiet || i.noMark));
+  box.className = "checks" + (errs ? " bad" : warns ? " warnonly" : "");
+  const head = missing.length ? `ยังกรอกข้อมูลไม่ครบ ${missing.length} ช่อง (${missing.map(id => REQUIRED[id]).join(", ")})${errs - missing.length > 0 || warns ? ` · ตรวจเพิ่ม ${errs - missing.length + warns} จุด` : ""}`
+    : errs ? `ต้องแก้ ${errs} จุด${warns ? ` · ควรตรวจ ${warns} จุด` : ""}` : warns ? `ควรตรวจ ${warns} จุดก่อนส่ง` : "ข้อมูลครบ พร้อมส่ง";
+  box.innerHTML = `<div class="hd"><span class="dot ${errs ? "err" : warns ? "warn" : "ok"}"></span>${head}</div>` + (I.length ? "<ul></ul>" : "");
+  const fixes = I.filter(i => i.fix && i.lvl !== "info");
+  if (fixes.length >= 2){
+    const b = document.createElement("button"); b.type = "button"; b.className = "btn small"; b.style.marginLeft = "auto";
+    b.textContent = `แก้ให้ทั้งหมด (${fixes.length})`;
+    b.onclick = () => { for (let n = 0; n < 8; n++){ const f = checkData().find(i => i.fix && i.lvl !== "info"); if (!f) break; f.fix.fn(); } };
+    box.querySelector(".hd").append(b);
+  }
+  const ul = box.querySelector("ul");
+  for (const i of I.sort((a,b) => ({err:0,warn:1,info:2})[a.lvl] - ({err:0,warn:1,info:2})[b.lvl])){
+    const li = document.createElement("li");
+    li.innerHTML = `<span class="dot ${i.lvl === "info" ? "" : i.lvl}"></span><span class="tx">${i.msg}</span>`;
+    if (i.fix){ const b = document.createElement("button"); b.type = "button"; b.className = "btn small"; b.textContent = i.fix.label; b.onclick = i.fix.fn; li.append(b); }
+    else { const b = document.createElement("button"); b.type = "button"; b.className = "btn small"; b.textContent = "ไปที่ช่อง"; b.onclick = () => jumpTo($(i.goto || i.field)); if (i.lvl !== "info" && $(i.goto || i.field) && !$(i.goto || i.field).closest("[hidden]")) li.append(b); }
+    ul.append(li);
+  }
+}
+// first click with open issues only warns; a second click on the same button goes ahead
+function guard(action){
+  if (!S.issueCount){ S.armed = null; return true; }
+  if (S.armed === action){ S.armed = null; return true; }
+  S.armed = action;
+  setStatus(`ยังมี ${S.issueCount} จุดที่ควรแก้ (ดูรายการด้านบน) · กดปุ่มเดิมอีกครั้งถ้าต้องการใช้ข้อมูลนี้ต่อ`, "warn");
+  return false;
+}
+function exportCanvas(scale = 4){
+  const c = document.createElement("canvas"); c.width = 600*scale; c.height = 814*scale;
+  draw(c.getContext("2d"), scale, true); return c;
+}
+// Tag a PNG with its print density so Outlook/Word/Mail place it at 600 × 814 instead of its pixel size.
+const CRC_T = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++){ let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+function crc32(b){ let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = CRC_T[(c ^ b[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+async function pngWithDPI(blob, scale){
+  const src = new Uint8Array(await blob.arrayBuffer());
+  const ppm = Math.round(96 * scale / 0.0254);                  // 96 dpi × scale, in pixels per metre
+  const chunk = new Uint8Array(21), dv = new DataView(chunk.buffer);
+  dv.setUint32(0, 9); chunk.set([0x70,0x48,0x59,0x73], 4);        // length 9, "pHYs"
+  dv.setUint32(8, ppm); dv.setUint32(12, ppm); chunk[16] = 1;     // x, y, unit = metre
+  dv.setUint32(17, crc32(chunk.subarray(4, 17)));
+  const at = 8 + 25;                                              // after signature + IHDR
+  const out = new Uint8Array(src.length + 21);
+  out.set(src.subarray(0, at)); out.set(chunk, at); out.set(src.subarray(at), at + 21);
+  return new Blob([out], {type: "image/png"});
+}
+const blobToDataURL = b => new Promise(r => { const f = new FileReader(); f.onload = () => r(f.result); f.readAsDataURL(b); });
+function baseName(){
+  const d = data(), clean = s => (s||"").replace(/[\\/:*?"<>|#%]+/g,"").replace(/\s+/g,"_").slice(0,60);
+  return ["NGG", currentLang().toUpperCase(), clean(d.name)||"Client", clean(d.ref)].filter(Boolean).join("_");
+}
+
+function setStatus(msg, kind=""){ const el=$("status"); el.className = "status " + kind; el.innerHTML = msg; }
+
+// ---------- downloads ----------
+const downloads = {
+  save: async ({filename, data}) => {
+    const url = URL.createObjectURL(data instanceof Blob ? data : new Blob([data]));
+    const a = document.createElement("a"); a.href = url; a.download = filename; document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+  }
+};
+(() => {
+})();
+async function save(filename, data){
+  if (!downloads){ setStatus("ดาวน์โหลดไม่ได้ในหน้านี้ ใช้ปุ่มคัดลอกรูปแทน", "warn"); return; }
+  try { await downloads.save({filename, data}); setStatus(`บันทึก ${filename} แล้ว`, "ok"); }
+  catch(e){
+    if (e && e.code === "declined") setStatus("ยกเลิกการบันทึก");
+    else if (e && e.code === "rate_limited") setStatus("มีหน้าต่างบันทึกเปิดอยู่ ลองอีกครั้งในอีกสักครู่", "warn");
+    else setStatus("บันทึกไฟล์ไม่สำเร็จ: " + (e?.message||e?.code||"unknown"), "err");
+  }
+}
+const toBlob = (c, type="image/png", q) => new Promise(res => c.toBlob(res, type, q));
+$("dlPng").onclick = async () => { if (!guard("png")) return; await fontsReady; save(baseName()+".png", await pngWithDPI(await toBlob(exportCanvas(4)), 4)); };
+$("dlPdf").onclick = async () => {
+  if (!guard("pdf")) return;
+  await fontsReady;
+  const c = exportCanvas();
+  const pdf = new window.jspdf.jsPDF({unit:"pt", format:[450, 610.5], compress:true});
+  pdf.addImage(c.toDataURL("image/jpeg", 0.95), "JPEG", 0, 0, 450, 610.5, undefined, "FAST");
+  save(baseName()+".pdf", pdf.output("blob"));
+};
+$("copyImg").onclick = async () => {
+  if (!guard("copy")) return;
+  try {
+    await fontsReady;
+    // 2× pixels (sharp on phones and Retina) shown at 600 px wide: the HTML copy carries the size, the PNG copy carries its DPI
+    const png = await pngWithDPI(await toBlob(exportCanvas(2)), 2);
+    const html = `<img src="${await blobToDataURL(png)}" width="600" height="814" style="width:600px;height:814px;max-width:100%;display:block" alt="NGG Timepieces">`;
+    try {
+      await navigator.clipboard.write([new ClipboardItem({"text/html": new Blob([html], {type:"text/html"}), "image/png": png})]);
+    } catch(e){
+      await navigator.clipboard.write([new ClipboardItem({"image/png": png})]);
+    }
+    setStatus("คัดลอกรูปแล้ว วางในอีเมลได้เลย (⌘/Ctrl + V) · รูปจะกว้าง 600 px ถ้ายังใหญ่ ให้คลิกรูปใน Outlook → Picture format → ตั้งความกว้าง 600 px", "ok");
+  } catch(e){ setStatus("เบราว์เซอร์นี้ไม่อนุญาตให้คัดลอกรูป ใช้ปุ่มดาวน์โหลด PNG แทน", "warn"); }
+};
+$("copyEmail").onclick = async () => {
+  const v = $("email").value.trim(); if (!v) return;
+  try { await navigator.clipboard.writeText(v); setStatus("คัดลอกอีเมลแล้ว", "ok"); }
+  catch(e){ $("email").select(); setStatus("กด ⌘/Ctrl + C เพื่อคัดลอก"); }
+};
+
+// ---------- images ----------
+function loadImage(file){
+  return new Promise((res, rej) => { const url = URL.createObjectURL(file); const im = new Image();
+    im.onload = () => res(im); im.onerror = rej; im.src = url; });
+}
+function wireDrop(drop, input, onFile){
+  drop.addEventListener("click", () => input.click());
+  drop.addEventListener("keydown", e => { if (e.key==="Enter"||e.key===" "){ e.preventDefault(); input.click(); } });
+  input.addEventListener("change", () => { if (input.files[0]) onFile(input.files[0]); input.value=""; });
+  drop.addEventListener("dragover", e => { e.preventDefault(); drop.classList.add("over"); });
+  drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+  drop.addEventListener("drop", e => { e.preventDefault(); drop.classList.remove("over");
+    const f = [...e.dataTransfer.files].find(f => isImageFile(f)); if (f) onFile(f); else setStatus("ไฟล์นี้ไม่ใช่รูปภาพ", "warn"); });
+}
+// ---------- watch image library (assets = files, db "watches/<KEY>" = index) ----------
+const L = {db:null, assets:null, map:new Map(), ready:false, off:new Set(), localFor:null, loadedKey:null, confirmDel:null};
+const normKey = c => (c||"").toUpperCase().replace(/[^A-Z0-9]/g,"").replace(/^M(?=\d)/,"");
+function codeFromFilename(n){
+  const base = n.replace(/\.[a-z0-9]+$/i,"");
+  const m = base.match(/M?\d{5,6}[A-Z]{0,6}[-_ ]?\d{4}/i);
+  return (m ? m[0] : base).replace(/_/g,"-").replace(/\s+/g,"").toUpperCase();
+}
+const blobURL = path => path;   // library entries point at files in watches/
+const isImageFile = f => !!f && (/^image\//.test(f.type || "") || /\.(png|jpe?g|webp|avif|gif|heic)$/i.test(f.name || ""));
+const typeLabel = f => ((f.name||"").match(/\.([a-z0-9]+)$/i)||[,""])[1].toUpperCase() || (f.type||"").replace("image/","").toUpperCase();
+// Crop away empty margins (white or transparent) so the watch sits centred and fills its box.
+function trimImage(src, pad = 0.02){
+  const w = src.naturalWidth || src.width, h = src.naturalHeight || src.height;
+  const c = document.createElement("canvas"); c.width = w; c.height = h;
+  const x = c.getContext("2d", {willReadFrequently: true}); x.drawImage(src, 0, 0);
+  let d; try { d = x.getImageData(0, 0, w, h).data; } catch(e){ return src; }
+  let x0 = w, y0 = h, x1 = -1, y1 = -1;
+  for (let y = 0; y < h; y++) for (let i = y*w*4, xx = 0; xx < w; xx++, i += 4){
+    const a = d[i+3]; if (a < 12) continue;
+    if (d[i] > 242 && d[i+1] > 242 && d[i+2] > 242) continue;
+    if (xx < x0) x0 = xx; if (xx > x1) x1 = xx; if (y < y0) y0 = y; if (y > y1) y1 = y;
+  }
+  if (x1 < 0) return src;
+  const m = Math.round(Math.max(x1-x0, y1-y0) * pad);
+  x0 = Math.max(0, x0-m); y0 = Math.max(0, y0-m); x1 = Math.min(w-1, x1+m); y1 = Math.min(h-1, y1+m);
+  if (x0 === 0 && y0 === 0 && x1 === w-1 && y1 === h-1) return src;
+  const o = document.createElement("canvas"); o.width = x1-x0+1; o.height = y1-y0+1;
+  o.getContext("2d").drawImage(c, x0, y0, o.width, o.height, 0, 0, o.width, o.height);
+  return o;
+}
+async function prepareBlob(file){
+  const im = await loadImage(file); const max = 1600;
+  // PNG/JPG/WEBP up to 1600 px are stored as-is; AVIF and anything else is converted to PNG (the library stores PNG/JPG/WEBP)
+  const t = trimImage(im), tw = t.naturalWidth || t.width, th = t.naturalHeight || t.height;
+  if (t === im && Math.max(tw, th) <= max && /^image\/(png|jpeg|webp)$/.test(file.type)) return {blob:file, type:file.type};
+  const r = Math.min(1, max / Math.max(tw, th)), c = document.createElement("canvas");
+  c.width = Math.round(tw*r); c.height = Math.round(th*r);
+  const x = c.getContext("2d"); x.imageSmoothingQuality = "high"; x.drawImage(t, 0, 0, c.width, c.height);
+  return {blob: await toBlob(c, "image/png"), type:"image/png"};
+}
+function assetErr(e){
+  const c = e?.code;
+  if (c === "too_large") return "ไฟล์ใหญ่เกิน 20 MB";
+  if (c === "unsupported_type") return "รองรับ PNG, JPG, WEBP, AVIF";
+  if (c === "quota_or_state") return "พื้นที่คลังเต็ม ลบรูปที่ไม่ใช้ก่อน";
+  if (c === "rate_limited") return "อัปโหลดถี่เกินไป รอสักครู่";
+  if (c === "not_granted" || c === "invalid_argument") return "บัญชีนี้ไม่มีสิทธิ์อัปโหลด (ต้องเป็น Editor)";
+  if (c === "quota_exceeded") return "จำนวนรูปในคลังเต็ม";
+  return "อัปโหลดไม่สำเร็จ (" + (c || e?.message || "unknown") + ")";
+}
+async function saveToLibrary(file, code, model){
+  const key = normKey(code);
+  if (!key) throw {message:"ใส่รหัสนาฬิกาก่อน"};
+  if (!L.assets){   // standalone site: write the trimmed, correctly named PNG into the repo's watches/ folder
+    const {blob} = await prepareBlob(file);
+    const png = blob.type === "image/png" ? blob : await (async () => { const im = await loadImage(blob); const c = document.createElement("canvas"); c.width = im.naturalWidth; c.height = im.naturalHeight; c.getContext("2d").drawImage(im,0,0); return toBlob(c, "image/png"); })();
+    const name = libFileName(code.trim().toUpperCase(), (model||"").trim());
+    if (!GH.token){
+      await downloads.save({filename: name, data: png});
+      setStatus(`ดาวน์โหลด ${name} แล้ว (อยู่ในโฟลเดอร์ Downloads) · อัปโหลดไฟล์นี้เข้าโฟลเดอร์ watches บน GitHub แล้วรีโหลดหน้านี้ · หรือเชื่อมต่อ GitHub เพื่อบันทึกได้ในคลิกเดียว`, "ok");
+      return key;
+    }
+    const prev = L.map.get(key);
+    const content = (await blobToDataURL(png)).split(",")[1];
+    const existing = await ghGet("watches/" + name);             // same file name already there → overwrite it
+    const res = await ghPut("watches/" + name, content, `Add watch image ${name}`, existing?.sha);
+    if (prev && prev.file && prev.file !== name && prev.sha){ try { await ghDelete("watches/" + prev.file, prev.sha, `Replace ${prev.file}`); } catch(e){} }
+    L.map.set(key, {code: code.trim().toUpperCase(), model: (model||"").trim(), assetId: URL.createObjectURL(png), file: name, sha: res.content?.sha});
+    L.localFor = null; renderLib(); syncMatch();
+    setStatus(`บันทึก ${name} เข้าคลังบน GitHub แล้ว ✓ ใช้ได้ทันที`, "ok");
+    return key;
+  }
+  const prev = L.map.get(key);
+  const {blob, type} = await prepareBlob(file);
+  const up = await L.assets.upload(blob, {type});
+  await L.db.doc("watches/" + key).set({code: code.trim().toUpperCase(), model: (model||"").trim(), assetId: up.id, addedAt: new Date().toISOString()});
+  if (prev && prev.assetId && prev.assetId !== up.id) { try { await L.assets.delete(prev.assetId); } catch(e){} }
+  return key;
+}
+
+function localMatches(key){ const f = L.localFor; return !!f && (f.key === key || f.ownKey === key); }
+function imgMismatch(key){ const f = L.localFor; return (localMatches(key) && f.fileCode && f.ownKey !== key) ? f.fileCode : null; }
+function syncMatch(){
+  const ref = $("ref").value.trim(), key = normKey(ref), entry = key && L.map.get(key);
+  const dot = $("matchDot"), txt = $("matchText");
+  if (L.off.has(key) && key){
+    S.watch = null; dot.className = "dot"; txt.textContent = "เลือกไม่ใส่รูปสำหรับจดหมายนี้";
+    $("watchThumb").hidden = true; $("watchUse").hidden = !entry && !localMatches(key); render(); markActive(); return;
+  }
+  $("watchUse").hidden = true;
+  if (localMatches(key)){
+    S.watch = L.localFor.trim || (L.localFor.trim = trimImage(L.localFor.img)); const mm = imgMismatch(key);
+    showThumb(L.localFor.img.src, L.localFor.label || ref || "รูปนาฬิกา", mm ? `⚠ รหัสรูปไม่ตรงกับรหัสนาฬิกา\n(${ref})` : "ใช้เฉพาะจดหมายนี้ (ไม่ได้บันทึกเข้าคลัง)");
+    $("watchSrc").classList.toggle("mm", !!mm);
+    dot.className = mm ? "dot err" : "dot ok"; txt.textContent = mm ? "ใช้รูปที่อัปโหลด · ⚠ รหัสในชื่อไฟล์ไม่ตรง" : "ใช้รูปที่อัปโหลด";
+  } else if (entry){
+    dot.className = "dot ok"; txt.textContent = `พบรูปในคลัง · ${entry.code}`;
+    const want = key + ":" + entry.assetId;
+    if (L.loadedKey !== want){
+      L.loadedKey = want; S.watch = null;
+      const im = new Image();
+      im.onload = () => { if (L.loadedKey === want){ S.watch = trimImage(im); render(); } };
+      im.onerror = () => { if (L.loadedKey === want){ dot.className = "dot warn"; txt.textContent = "เปิดรูปจากคลังไม่ได้ ลองอัปโหลดใหม่"; } };
+      im.src = blobURL(entry.assetId);
+    }
+    showThumb(blobURL(entry.assetId), entry.code, entry.model ? `${entry.model} · จากคลังรูป` : "จากคลังรูป");
+  } else {
+    S.watch = null; L.loadedKey = null; $("watchThumb").hidden = true;
+    dot.className = key ? "dot warn" : "dot";
+    txt.textContent = !L.ready ? (L.db ? "กำลังเปิดคลังรูป…" : "คลังรูปใช้ไม่ได้ในหน้านี้ อัปโหลดรูปเพื่อใช้เฉพาะจดหมายนี้")
+      : key ? `ยังไม่มีรูปของ ${ref} ในคลัง · อัปโหลดด้านล่าง` : "ใส่รหัสนาฬิกาเพื่อค้นหารูป";
+  }
+  render(); markActive();
+}
+function showThumb(src, label, from){ $("watchSrc").classList.remove("mm"); $("watchImg").src = src; $("watchLabel").textContent = label; $("watchSrc").textContent = from; $("watchThumb").hidden = false; }
+$("watchClear").onclick = () => { const k = normKey($("ref").value); if (k) L.off.add(k); else { L.localFor = null; } syncMatch(); };
+$("watchUse").onclick = () => { L.off.delete(normKey($("ref").value)); syncMatch(); };
+
+// check that an uploaded image's file name matches the code in the Reference field
+function checkFileVsRef(fileName, key, ref){
+  if (!key) return {state:"none"};
+  const base = fileName.replace(/\.[a-z0-9]+$/i, "");
+  if (base.toUpperCase().replace(/[^A-Z0-9]/g, "").includes(key)) return {state:"ok"};
+  const m = base.match(/(?<![A-Z0-9])M?\d{5,6}[A-Z]{0,6}[-_ ]\d{4}(?!\d)/i);   // a different code in the file name
+  if (m) return {state:"mismatch", code: m[0]};
+  return {state:"unknown"};
+}
+wireDrop($("watchDrop"), $("watchFile"), async file => {
+  const ref = $("ref").value.trim(), key = normKey(ref);
+  const chk = checkFileVsRef(file.name, key, ref);
+  const prevLocal = L.localFor;
+  if (chk.state === "mismatch" && !confirm(`ชื่อไฟล์ "${file.name}" เป็นรหัส ${chk.code} ไม่ตรงกับรหัสในช่อง Reference (${ref})\n\nกด “ตกลง” เพื่อใช้รูปนี้ต่อ หรือ “ยกเลิก” เพื่อเลือกรูปใหม่`)){
+    setStatus(`ยังไม่ได้ใช้รูป · ชื่อไฟล์ (${chk.code}) ไม่ตรงกับรหัส ${ref}`, "warn"); return;
+  }
+  L.off.delete(key);
+  if (GH.token && key && chk.state !== "mismatch"){
+    setStatus(`<span class="spinner"></span> กำลังบันทึกรูป ${ref} เข้าคลัง…`);
+    try { await saveToLibrary(file, ref, $("model").value); L.localFor = null; setStatus(`บันทึกรูป ${ref} เข้าคลังแล้ว ครั้งหน้าจะขึ้นอัตโนมัติ`, "ok"); }
+    catch(e){ setStatus(assetErr(e) + " · ใช้รูปนี้เฉพาะจดหมายนี้แทน", "warn"); await useLocal(file, key); }
+  } else {
+    await useLocal(file, key);
+    if (!key) setStatus("ใส่รหัสนาฬิกาในช่อง Reference ด้วย เพื่อให้รูปจับคู่กับรหัสถูกต้อง", "warn");
+  }
+  if (L.localFor && L.localFor !== prevLocal && L.localFor.key === key){
+    const f = L.localFor, mism = chk.state === "mismatch";
+    f.fileCode = mism ? chk.code : null;
+    f.ownKey = mism ? normKey(chk.code) : (chk.state === "ok" ? key : null);
+    f.label = file.name;
+  }
+  syncMatch();
+  if (chk.state === "mismatch") setStatus(`⚠ ใช้รูป “${file.name}” ที่รหัสไม่ตรงกับ ${ref} · ตรวจสอบรูปก่อนส่ง`, "err");
+  else if (!GH.token){
+    if (chk.state === "ok") setStatus(`✓ ชื่อไฟล์ตรงกับรหัส ${ref}`, "ok");
+    else if (chk.state === "unknown") setStatus(`ชื่อไฟล์ “${file.name}” ไม่มีรหัสรุ่น จึงตรวจว่าตรงกับ ${ref} ไม่ได้ · ตรวจให้แน่ใจว่ารูปถูกรุ่น`, "warn");
+  }
+});
+async function useLocal(file, key){ try { L.localFor = {key, img: await loadImage(file)}; } catch(e){ setStatus("เบราว์เซอร์นี้เปิดรูปไม่ได้ (ถ้าเป็น AVIF ให้อัปเดตเบราว์เซอร์ หรือบันทึกเป็น PNG)", "err"); } }
+
+// image preview (lightbox)
+let lbReturn = null;
+function openLightbox(src, caption){
+  lbReturn = document.activeElement;
+  $("lbImg").src = src; $("lbImg").alt = caption || ""; $("lbCap").textContent = caption || ""; $("lbSize").textContent = "";
+  $("lbImg").onload = () => { $("lbSize").textContent = `${$("lbImg").naturalWidth} × ${$("lbImg").naturalHeight} px`; };
+  $("lb").hidden = false; $("lbClose").focus();
+}
+function closeLightbox(){ $("lb").hidden = true; $("lbImg").removeAttribute("src"); lbReturn && lbReturn.focus && lbReturn.focus(); }
+$("lbClose").onclick = closeLightbox;
+$("lb").addEventListener("click", e => { if (e.target === $("lb")) closeLightbox(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("lb").hidden) closeLightbox(); });
+$("watchZoom").onclick = () => openLightbox($("watchImg").src, $("watchLabel").textContent);
+$("shotZoom").onclick = () => openLightbox($("shotPreview").src, "ภาพหน้าจอที่วาง");
+
+// library panel
+function renderLib(){
+  const q = $("libSearch").value.trim().toLowerCase();
+  const all = [...L.map.entries()].sort((a,b) => a[1].code.localeCompare(b[1].code));
+  const rows = all.filter(([,v]) => !q || v.code.toLowerCase().includes(q) || (v.model||"").toLowerCase().includes(q));
+  $("libCount").textContent = L.ready ? `${all.length} รุ่นในคลัง · ระบบจับคู่รูปกับรหัสนาฬิกา (Reference) ให้อัตโนมัติ` : $("libCount").textContent;
+  $("libEmpty").hidden = !(L.ready && all.length === 0);
+  const g = $("libGrid"); g.innerHTML = "";
+  for (const [key, v] of rows){
+    const card = document.createElement("div"); card.className = "card"; card.dataset.key = key;
+    card.innerHTML = `<button type="button" class="ph zoom" title="ดูรูปขนาดใหญ่"><img alt=""></button><div class="cap"><div class="code"></div><div class="model"></div><div class="btns"><button type="button" class="btn small use">ใช้กับจดหมาย</button><button type="button" class="btn small dl">ดาวน์โหลด</button></div></div>`;
+    const cimg = card.querySelector("img"); cimg.alt = v.code;
+    cimg.onload = () => { cimg.onload = null; const t = trimImage(cimg); if (t !== cimg) cimg.src = t.toDataURL("image/png"); };  // centre older, untrimmed uploads
+    cimg.src = blobURL(v.assetId);
+    card.querySelector(".zoom").onclick = () => openLightbox(blobURL(v.assetId), v.code + (v.model ? " · " + v.model : ""));
+    card.querySelector(".code").textContent = v.code; card.querySelector(".model").textContent = v.model || "";
+    const dl = card.querySelector(".dl");
+    dl.onclick = async () => {
+      dl.disabled = true;
+      try {
+        const blob = await (await fetch(blobURL(v.assetId))).blob();
+        const ext = ({"image/png":"png","image/jpeg":"jpg","image/webp":"webp"})[blob.type] || "png";
+        await save(`${v.code}${v.model ? "_" + v.model.replace(/[\\/:*?"<>|]+/g,"").replace(/\s+/g,"-") : ""}.${ext}`, blob);
+      } catch(e){ setStatus("ดาวน์โหลดรูปไม่สำเร็จ ลองใหม่อีกครั้ง", "err"); }
+      dl.disabled = false;
+    };
+    card.querySelector(".use").onclick = () => {
+      $("ref").value = v.code; if (v.model) $("model").value = v.model; L.off.delete(key);
+      $("sampleChip").hidden = true; syncMatch(); window.scrollTo({top:0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+    };
+    if (GH.token && v.sha){
+      const del = document.createElement("button"); del.type = "button"; del.className = "btn small danger";
+      del.textContent = L.confirmDel === key ? "ยืนยันลบ" : "ลบ";
+      del.onclick = async () => {
+        if (L.confirmDel !== key){ L.confirmDel = key; renderLib(); return; }
+        L.confirmDel = null; del.disabled = true;
+        try { await ghDelete("watches/" + v.file, v.sha, `Remove ${v.file}`); L.map.delete(key); renderLib(); syncMatch(); setStatus(`ลบรูป ${v.code} ออกจากคลังแล้ว`, "ok"); }
+        catch(e){ setStatus("ลบไม่สำเร็จ: " + (e?.code || e?.message), "err"); renderLib(); }
+      };
+      card.querySelector(".btns").append(del);
+    }
+    g.append(card);
+  }
+  markActive();
+}
+function markActive(){ const k = normKey($("ref").value); document.querySelectorAll(".card").forEach(c => c.classList.toggle("active", c.dataset.key === k && !L.off.has(k))); }
+$("libSearch").addEventListener("input", renderLib);
+
+function addPending(files){
+  for (const file of files){
+    if (!isImageFile(file)){ setStatus(`${file.name}: รองรับ PNG, JPG, WEBP, AVIF`, "warn"); continue; }
+    const row = document.createElement("div"); row.className = "prow";
+    const code = codeFromFilename(file.name), ex = L.map.get(normKey(code));
+    row.innerHTML = `<button type="button" class="zoom" title="ดูรูปขนาดใหญ่"><img alt=""></button><div class="pinfo"><input type="text" class="pc" aria-label="รหัสนาฬิกา" placeholder="รหัส เช่น M126284RBR-0051"><input type="text" class="pm" aria-label="รุ่น" placeholder="รุ่น เช่น DATEJUST 36 (ไม่บังคับ)"><span class="hint fi"></span></div><button type="button" class="btn small ptry">ดูในจดหมาย</button><button type="button" class="btn small primary ps">${GH.token ? "บันทึก" : "เตรียมไฟล์"}</button><button type="button" class="btn small px">ยกเลิก</button>`;
+    const url = URL.createObjectURL(file), pimg = row.querySelector("img"); pimg.src = url;
+    const fi = row.querySelector(".fi");
+    pimg.onload = () => { fi.textContent = `${file.name} · ${pimg.naturalWidth}×${pimg.naturalHeight}px · ${(file.size/1024/1024).toFixed(1)} MB` + (/^image\/(png|jpeg|webp)$/.test(file.type) ? "" : ` · ${typeLabel(file)} จะถูกแปลงเป็น PNG ตอนบันทึก`); };
+    pimg.onerror = () => { fi.textContent = `${file.name} · เบราว์เซอร์นี้เปิดรูปไม่ได้`; fi.style.color = "var(--err)"; row.querySelector(".ps").disabled = true; row.querySelector(".ptry").disabled = true; };
+    row.querySelector(".zoom").onclick = () => openLightbox(url, row.querySelector(".pc").value || file.name);
+    row.querySelector(".ptry").onclick = async () => {
+      const c = row.querySelector(".pc").value.trim(); if (c) $("ref").value = c;
+      const m = row.querySelector(".pm").value.trim(); if (m) $("model").value = m;
+      L.off.delete(normKey($("ref").value)); await useLocal(file, normKey($("ref").value)); $("sampleChip").hidden = true; syncMatch();
+      setStatus("แสดงรูปนี้ในตัวอย่างจดหมายแล้ว (ยังไม่ได้บันทึกเข้าคลัง)", "ok");
+      window.scrollTo({top:0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+    };
+    row.querySelector(".pc").value = code; row.querySelector(".pm").value = ex?.model || "";
+    row.querySelector(".px").onclick = () => { URL.revokeObjectURL(url); row.remove(); };
+    row.querySelector(".ps").onclick = async () => {
+      const b = row.querySelector(".ps"); b.disabled = true; b.innerHTML = '<span class="spinner"></span>';
+      row.querySelector(".err")?.remove();
+      try {
+        const c = row.querySelector(".pc").value.trim();
+        await saveToLibrary(file, c, row.querySelector(".pm").value);
+        URL.revokeObjectURL(url); row.remove();
+      } catch(e){
+        b.disabled = false; b.textContent = GH.token ? "บันทึก" : "เตรียมไฟล์";
+        const m = document.createElement("div"); m.className = "err"; m.textContent = e?.code ? assetErr(e) : (e?.message || "บันทึกไม่สำเร็จ"); row.append(m);
+      }
+    };
+    $("pending").append(row);
+  }
+}
+(function(){
+  const drop = $("libDrop"), input = $("libFile");
+  drop.addEventListener("click", () => input.click());
+  drop.addEventListener("keydown", e => { if (e.key==="Enter"||e.key===" "){ e.preventDefault(); input.click(); } });
+  input.addEventListener("change", () => { addPending([...input.files]); input.value = ""; });
+  drop.addEventListener("dragover", e => { e.preventDefault(); drop.classList.add("over"); });
+  drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+  drop.addEventListener("drop", e => { e.preventDefault(); drop.classList.remove("over"); addPending([...e.dataTransfer.files]); });
+})();
+
+// "M126711CHNR-0002_GMT-MASTER II.png" → code + model; the file name is the whole index
+function libFileName(code, model){ return code + (model ? "_" + model.replace(/[\\/:*?"<>|#%]+/g,"").trim() : "") + ".png"; }
+function parseLibFile(name){
+  const m = name.match(/^(.+?)\.(png|jpe?g|webp|avif|gif)$/i); if (!m) return null;
+  const [code, ...rest] = m[1].split("_");
+  return {code: code.trim().toUpperCase(), model: rest.join(" ").trim()};
+}
+const REPO = (() => {   // <owner>.github.io/<repo>/  → owner, repo
+  const owner = location.hostname.endsWith(".github.io") ? location.hostname.split(".")[0] : "";
+  const repo = location.pathname.split("/").filter(Boolean)[0] || (owner ? owner + ".github.io" : "");
+  return {owner, repo};
+})();
+const GH = {token: (() => { try { return localStorage.getItem("ngg-gh-token") || ""; } catch(e){ return ""; } })()};
+const ghURL = path => `https://api.github.com/repos/${REPO.owner}/${REPO.repo}/contents/` + path.split("/").map(encodeURIComponent).join("/");
+const ghHeaders = () => Object.assign({Accept: "application/vnd.github+json"}, GH.token ? {Authorization: "Bearer " + GH.token} : {});
+function ghError(r){
+  if (r.status === 401) return {message: "token ใช้ไม่ได้หรือหมดอายุ · กดยกเลิกการเชื่อมต่อแล้วเชื่อมต่อใหม่"};
+  if (r.status === 403 || r.status === 404) return {message: "token นี้ไม่มีสิทธิ์เขียน repository enquiry-letters (ต้องตั้ง Contents: Read and write)"};
+  return {message: "GitHub ตอบกลับ " + r.status};
+}
+async function ghGet(path){ const r = await fetch(ghURL(path), {headers: ghHeaders(), cache: "no-store"}); if (r.status === 404) return null; if (!r.ok) throw ghError(r); return r.json(); }
+async function ghPut(path, content, message, sha){
+  const r = await fetch(ghURL(path), {method: "PUT", headers: ghHeaders(), body: JSON.stringify(Object.assign({message, content, branch: "main"}, sha ? {sha} : {}))});
+  if (!r.ok) throw ghError(r); return r.json();
+}
+async function ghDelete(path, sha, message){
+  const r = await fetch(ghURL(path), {method: "DELETE", headers: ghHeaders(), body: JSON.stringify({message, sha, branch: "main"})});
+  if (!r.ok) throw ghError(r); return r.json();
+}
+function syncGH(){
+  $("ghOn").hidden = !GH.token; $("ghOff").hidden = !!GH.token; $("ghManual").hidden = !!GH.token;
+  document.querySelectorAll(".prow .ps").forEach(b => { if (!b.disabled) b.textContent = GH.token ? "บันทึก" : "เตรียมไฟล์"; });
+  $("watchDropHint").textContent = GH.token ? "ลากรูปมาวางหรือคลิกเพื่อเลือก · รูปจะถูกบันทึกเข้าคลังด้วยรหัสในช่อง Reference"
+    : "ลากรูปมาวางหรือคลิกเพื่อเลือก · ใช้เฉพาะจดหมายนี้";
+  renderLib();
+}
+$("ghSave").onclick = async () => {
+  const t = $("ghToken").value.trim(); if (!t) return;
+  $("ghSave").disabled = true;
+  try {
+    const r = await fetch(`https://api.github.com/repos/${REPO.owner}/${REPO.repo}`, {headers: {Accept: "application/vnd.github+json", Authorization: "Bearer " + t}});
+    if (!r.ok) throw ghError(r);
+    const j = await r.json();
+    if (j.permissions && !j.permissions.push) throw {message: "token นี้อ่านได้อย่างเดียว · ต้องตั้ง Contents: Read and write"};
+    GH.token = t; try { localStorage.setItem("ngg-gh-token", t); } catch(e){}
+    $("ghToken").value = ""; syncGH(); setStatus("เชื่อมต่อ GitHub แล้ว · บันทึกรูปเข้าคลังได้ทันที", "ok");
+  } catch(e){ setStatus("เชื่อมต่อไม่สำเร็จ: " + (e.message || e), "err"); }
+  $("ghSave").disabled = false;
+};
+$("ghOut").onclick = () => { GH.token = ""; try { localStorage.removeItem("ngg-gh-token"); } catch(e){} syncGH(); setStatus("ยกเลิกการเชื่อมต่อ GitHub แล้ว"); };
+
+(async () => {
+  L.db = null; L.assets = null;
+  if (REPO.owner) $("ghUpload").href = `https://github.com/${REPO.owner}/${REPO.repo}/upload/main/watches`;
+  else $("ghUpload").removeAttribute("href");
+  let files = [];
+  try {   // 1) GitHub lists the folder (public repo; token raises the rate limit)
+    if (!REPO.owner) throw 0;
+    const r = await fetch(ghURL("watches"), {headers: ghHeaders(), cache: "no-store"});
+    if (!r.ok) throw 0;
+    files = (await r.json()).filter(f => f.type === "file").map(f => ({name: f.name, sha: f.sha}));
+  } catch(e){
+    try {   // 2) fallback: watches/list.json, a plain array of file names
+      const r = await fetch("watches/list.json", {cache:"no-store"}); if (r.ok) files = (await r.json()).map(n => ({name: n}));
+    } catch(e2){}
+  }
+  L.map = new Map();
+  for (const f of files){
+    const p = parseLibFile(f.name); if (!p || !p.code) continue;
+    L.map.set(normKey(p.code), {code: p.code, model: p.model, assetId: "watches/" + encodeURIComponent(f.name), file: f.name, sha: f.sha});
+  }
+  L.ready = true; syncGH(); syncMatch();
+})();
+
+// ---------- reading form data ----------
+function markNeedFill(){ $("salesName").classList.add("needfill"); }
+function clearNeedFill(){ $("salesName").classList.remove("needfill"); }
+// "Anurak (Udon)" → name "Anurak", note "(Udon)". Notes in (), [], or after " - " / " / " never go on the letter.
+function splitNote(v){
+  let name = (v||"").replace(/\s+/g," ").trim(), notes = [];
+  name = name.replace(/\s*[\(\[（【]([^\)\]）】]*)[\)\]）】]?/g, (m, t) => { if (t.trim()) notes.push(t.trim()); return " "; });
+  const slash = name.match(/^([^\/|]*?\S)\s*[\/|]\s*(.+)$/); if (slash){ name = slash[1]; notes.push(slash[2].trim()); }
+  const dash = name.match(/^(.*?\S)\s+[-–—]\s+(.+)$/); if (dash){ name = dash[1]; notes.push(dash[2].trim()); }
+  return {name: name.replace(/\s+/g," ").trim(), notes};
+}
+function matchSales(v){
+  const norm = s => (s||"").toLowerCase().replace(/[()]/g," ").replace(/\s+/g," ").trim();
+  const find = q => !q ? -1 : SALESPEOPLE.findIndex(p => { const w = (norm(p.en)+" "+norm(p.th)).split(" "); return q.split(" ").every(x => w.includes(x)); });
+  let i = find(norm(v));                        // "Anurak (Parewa)" – nickname in brackets still matches
+  if (i < 0) i = find(norm(splitNote(v).name)); // "Anurak (Udon)" – drop the note, match "Anurak"
+  return i;
+}
+// Snap an OCR'd model name to the Rolex collection it is closest to ("GMT-MASTER i" → "GMT-MASTER II"); keeps the case size.
+function snapModel(m){
+  const raw = (m||"").toUpperCase().replace(/[|]/g,"I").replace(/\s+/g," ").trim();
+  if (!raw) return m;
+  const size = (raw.match(/\b(\d{2})\s*(MM)?\b/)||[])[1];
+  const text = raw.replace(/\b\d{2}\s*(MM)?\b/g,"").replace(/\b[IL1]{1,3}\b\s*$/, t => "I".repeat(Math.max(1, t.trim().length))).trim();
+  const flat = t => t.replace(/[^A-Z0-9]/g,"");
+  const romanTail = /\b[IL1]{1,3}\s*$/i.test((m||"").replace(/\b\d{2}\s*(mm)?\b/gi,"").trim());
+  let best = null, bd = 99;
+  for (const c of COLLECTIONS){
+    const d = lev(flat(text), flat(c));
+    if (d < bd || (d === bd && romanTail && /\bII$/.test(c))) { bd = d; best = c; }
+  }
+  if (!best || bd > Math.max(1, Math.floor(flat(best).length / 4))) return m;   // too far: leave it for the checks box
+  return best + (size ? " " + size : "");
+}
+function applyFields(o, replace = true){
+  if (o.model) o.model = snapModel(o.model);
+  if (replace) ["name","email","mobile","model","ref"].forEach(id => $(id).value = "");
+  const code = (!o.masterCode || /^other|อื่น/i.test(o.masterCode)) ? (o.otherCode||o.masterCode||"") : o.masterCode;
+  if (o.name) $("name").value = o.name.trim();
+  if (o.email) $("email").value = o.email.trim();
+  if (o.model) $("model").value = o.model.trim();
+  if (code) $("ref").value = code.trim();
+  if (o.mobile) $("mobile").value = o.mobile.trim();
+  S.salesRaw = ""; clearNeedFill();
+  if (o.salesperson){
+    const i = matchSales(o.salesperson), sp = splitNote(o.salesperson);
+    S.salesRaw = o.salesperson.trim();
+    if (i >= 0) $("sales").value = String(i);
+    else {
+      // not in the salesperson list: don't guess (OCR can garble names) – leave pink fields to fill in
+      $("sales").value = "other"; $("salesName").value = ""; markNeedFill();
+    }
+    syncOther();
+  }
+  S.lang = "auto"; syncSeg();
+  $("sampleChip").hidden = true; syncMatch();
+}
+function parseText(t){
+  const LABELS = [["name",/^\s*name\b|ชื่อ\s*-?\s*นามสกุล/i],["email",/^\s*e-?mail\b|อีเมล/i],["mobile",/^\s*mobile\b|เบอร์โทร/i],
+    ["model",/^\s*model of interest|รุ่นที่สนใจ/i],["masterCode",/^\s*rolex master code|master code|หมายเลข(รหัส|อ้างอิง)/i],
+    ["otherCode",/^\s*other\s*\(|^\s*other\b.*specify|อื่นๆ\s*\(?โปรดระบุ/i],["salesperson",/^\s*sales\s*person|พนักงานขาย/i]];
+  const isLabel = l => LABELS.some(([,re]) => re.test(l));
+  const isFragment = l => /^[\s(]*(นาฬิกา|ที่สนใจ|ของนาฬิกา|โปรดระบุรหัส|ระบุรหัส|รหัส|specify)[\s)]*[:：]?$/i.test(l);
+  const ls = t.replace(/\r/g,"").split("\n").map(x => x.replace(/[|｜]/g," ").replace(/\s+/g," ").trim()).filter(Boolean);
+  const o = {};
+  for (let i = 0; i < ls.length; i++){
+    const k = LABELS.find(([,re]) => re.test(ls[i]));
+    if (!k || o[k[0]]) continue;
+    const inline = (ls[i].match(/[:：]\s*(.+)$/)||[])[1];
+    if (inline && !isLabel(inline)){ o[k[0]] = inline.trim(); continue; }
+    for (let j = i + 1; j < Math.min(ls.length, i + 4); j++){
+      if (isLabel(ls[j])) break;
+      if (isFragment(ls[j])) continue;
+      o[k[0]] = ls[j]; break;
+    }
+  }
+  // values that have a recognisable shape are taken from anywhere in the text
+  const flat = ls.join("\n");
+  const em = flat.replace(/\s*@\s*/g,"@").match(/[A-Za-z0-9._%+\-]+@[A-Za-z0-9\-]+(\.[A-Za-z0-9\-]+)+/);
+  if (em) o.email = em[0];
+  const REF = /\bM?\d{5,6}(?:[A-Z]{1,6}\s?[-–]?\s?|\s?[-–]\s?)[0-9OIl]{4}\b/i;
+  const refs = ls.map(l => (l.match(REF)||[])[0]).filter(Boolean);
+  if (refs.length){ o.otherCode = refs[refs.length-1].replace(/\s/g,""); if (!o.masterCode || !REF.test(o.masterCode)) o.masterCode = "Other"; }
+  if (o.mobile){ const ph = o.mobile.match(/\+?\d[\d\s\-]{7,16}\d/); o.mobile = ph ? ph[0] : o.mobile; }
+  else { const ph = flat.match(/\+?\d{2,3}[\d\s\-]{7,14}\d/); if (ph && !REF.test(ph[0])) o.mobile = ph[0]; }
+  return o;
+}
+$("parseBtn").onclick = () => {
+  const o = parseText($("pasteText").value);
+  if (!o.name && !o.model){ setStatus("ไม่พบหัวข้อ Name / Model ในข้อความ ตรวจว่าคัดลอกมาครบ", "warn"); return; }
+  applyFields(o); setStatus("อ่านข้อความแล้ว ตรวจข้อมูลอีกครั้งก่อนดาวน์โหลด", "ok");
+};
+
+// Screenshot reading. Claude reads the picture through the page's `sample` capability.
+const sampleP = Promise.resolve(null);   // standalone site: OCR in the browser
+let shotBusy = false;
+// On-device OCR (Tesseract, Thai + English) for views where Claude cannot receive images.
+// Engine and language files are published next to this page under ocr/.
+let claudeImagesOff = false;
+function loadScript(src){ return new Promise((res, rej) => { const el = document.createElement("script"); el.src = src; el.onload = res; el.onerror = () => rej(new Error("load " + src)); document.head.append(el); }); }
+async function ocrPrep(file){
+  const im = await loadImage(file);
+  const k = Math.max(1, Math.min(3, 1800 / im.width));   // small screenshots read far better enlarged
+  const c = document.createElement("canvas"); c.width = Math.round(im.width*k); c.height = Math.round(im.height*k);
+  const x = c.getContext("2d"); x.fillStyle = "#fff"; x.fillRect(0,0,c.width,c.height);
+  x.imageSmoothingQuality = "high"; x.drawImage(im, 0, 0, c.width, c.height);
+  // coloured text (e.g. the orange email link) → dark: keep each pixel's darkest channel, then stretch contrast
+  const d = x.getImageData(0, 0, c.width, c.height), px = d.data;
+  for (let i = 0; i < px.length; i += 4){
+    const v = Math.min(px[i], px[i+1], px[i+2]);
+    const w = v > 200 ? 255 : v < 90 ? 0 : Math.round((v - 90) * 255 / 110);
+    px[i] = px[i+1] = px[i+2] = w;
+  }
+  x.putImageData(d, 0, 0);
+  return toBlob(c, "image/png");
+}
+const ocrWorkers = {};
+async function ocrWorker(langs){
+  if (!window.Tesseract) await loadScript("https://cdn.jsdelivr.net/npm/tesseract.js@6.0.1/dist/tesseract.min.js");
+  const key = langs.join("+");
+  if (!ocrWorkers[key]){
+    ocrWorkers[key] = Tesseract.createWorker(langs, 1, {
+      logger: m => { const el = $("ocrPct"); if (el && m.progress != null) el.textContent = Math.round(m.progress*100) + "%"; },
+    });
+  }
+  return ocrWorkers[key];
+}
+async function ocrRun(langs, blob){
+  const w = await ocrWorker(langs);
+  const {data} = await w.recognize(blob, {}, {text:true, blocks:true});
+  const lines = [];
+  for (const b of data.blocks || []) for (const p of b.paragraphs || []) for (const l of p.lines || []) lines.push({text: l.text.replace(/\s+/g," ").trim(), conf: l.confidence});
+  return {text: data.text || "", lines};
+}
+const lineConf = (run, val) => { const v = (val||"").replace(/\s+/g,""); const l = run.lines.find(x => v && x.text.replace(/\s+/g,"").includes(v.slice(0, 6))); return l ? l.conf : 0; };
+// Thai+English pass for everything; an English-only pass decides mixed lines such as "Patsara/ขอนแก่น" when the salesperson isn't recognised
+// Two passes: Thai+English (reads Thai names) and English-only (reads Latin text far more accurately).
+// Each field takes whichever pass fits what it should contain.
+const LATIN_WORD = /^(?:[A-Z][a-z'’.-]+|[A-Z]{2,}[a-z]*)$/;   // Nuttachai, Sarasern, O'Neil, SMITH
+const cleanLatinName = v => { const w = (v||"").trim().split(/\s+/); return w.length >= 1 && w.every(x => LATIN_WORD.test(x) && x.length >= 2); };
+async function readWithOCR(file){
+  shotMsg('<span class="spinner"></span> อ่านรูปด้วยระบบ OCR ในเครื่อง… <span id="ocrPct"></span> (ครั้งแรกโหลดระบบประมาณ 10–20 วินาที)');
+  const blob = await ocrPrep(file);
+  const th = await ocrRun(["tha","eng"], blob), o = parseText(th.text);
+  const en = await ocrRun(["eng"], blob), oe = parseText(en.text);
+
+  // fields that are always Latin: trust the English pass when its value has the right shape
+  if (oe.email && /@/.test(oe.email)) o.email = oe.email;
+  if (oe.mobile && /\d{8,}/.test(oe.mobile.replace(/\D/g,""))) o.mobile = oe.mobile;
+  if (oe.otherCode) { o.otherCode = oe.otherCode; o.masterCode = oe.masterCode || o.masterCode; }
+  if (oe.model && /^[A-Z0-9 .\-]{3,}$/i.test(oe.model)) o.model = oe.model;
+
+  // customer name: a name read as part-Latin/part-Thai, or one the English pass reads as clean Latin words, is a Latin name
+  const thName = (o.name||"").trim(), enName = (oe.name||"").trim();
+  if (enName && cleanLatinName(enName)){
+    const words = thName.split(/\s+/);
+    const mixed = words.some(w => /^[A-Za-z]/.test(w)) && words.some(w => isThaiText(w));
+    const noThai = !isThaiText(thName);
+    const confident = lineConf(en, enName) >= 70 && lineConf(en, enName) >= lineConf(th, thName) - 10;
+    if (mixed || noThai || confident) o.name = enName;
+  }
+
+  // salesperson: same idea, on the part before any note ("Anurak/bkk", "Patsara/ขอนแก่น")
+  if (o.salesperson && matchSales(o.salesperson) < 0){
+    const head = (oe.salesperson || "").match(/^[A-Za-z][A-Za-z.' -]{1,40}?(?=\s*[\/|(]|$)/);
+    if (head && (matchSales(head[0]) >= 0 || (/^[A-Za-z]{3,}\s*\//.test(oe.salesperson) && !/\//.test(o.salesperson)) || cleanLatinName(head[0]) || lineConf(en, oe.salesperson) > lineConf(th, o.salesperson)))
+      o.salesperson = head[0].trim();
+  }
+  return o;
+}
+
+function shotMsg(html, kind=""){ const el = $("shotStatus"); el.className = "shotstatus " + kind; el.innerHTML = html; el.hidden = !html; }
+async function toPngForClaude(file){
+  // normalise any screenshot (HEIC/huge/odd type) to a PNG ≤ 2000 px so Claude accepts it
+  const im = await loadImage(file); const r = Math.min(1, 2000 / Math.max(im.width, im.height));
+  const c = document.createElement("canvas"); c.width = Math.round(im.width*r); c.height = Math.round(im.height*r);
+  const x = c.getContext("2d"); x.fillStyle = "#fff"; x.fillRect(0,0,c.width,c.height); x.drawImage(im, 0, 0, c.width, c.height);
+  return {blob: await toBlob(c, "image/png"), url: c.toDataURL("image/png")};
+}
+async function readShot(file){
+  if (shotBusy) return;
+  if (!isImageFile(file)){ shotMsg("ไฟล์นี้ไม่ใช่รูปภาพ ลองแคปหน้าจอใหม่แล้ววางอีกครั้ง", "warn"); return; }
+  shotBusy = true;
+  let img;
+  try { img = await toPngForClaude(file); }
+  catch(e){ shotMsg("เปิดรูปนี้ไม่ได้ ลองบันทึกเป็น PNG หรือ JPG แล้วอัปโหลดใหม่", "err"); shotBusy = false; return; }
+  $("shotPreview").src = img.url; $("shotZoom").hidden = false;
+  shotMsg('<span class="spinner"></span> ได้รับรูปแล้ว กำลังอ่านข้อมูล… (ประมาณ 5–20 วินาที)');
+  const sample = claudeImagesOff ? null : await sampleP;
+  let viaClaude = false;
+  if (sample){
+    try {
+      const o = await sample.json(
+        "This image shows one customer's watch-interest registration for NGG Timepieces, a Rolex boutique in Thailand. " +
+        "It is usually a Google Form response with bilingual labels, but it may also be a spreadsheet row, a chat message or a photo of a screen. " +
+        "Read each value exactly as written; keep Thai text in Thai and do not translate or correct spelling. Fields: " +
+        "name ('Name / ชื่อ-นามสกุล'), email ('Email / อีเมล'), mobile ('Mobile / เบอร์โทร'), model ('Model of Interest / ระบุรุ่นที่สนใจ'), " +
+        "masterCode ('Rolex Master Code / ระบุหมายเลขรหัสของนาฬิกา'), otherCode ('Other (Please Specify) / อื่นๆ (โปรดระบุรหัส)'), salesperson ('Salesperson / พนักงานขาย'). " +
+        'Reply with JSON only, no prose: {"name":"","email":"","mobile":"","model":"","masterCode":"","otherCode":"","salesperson":""}. Use "" for anything not visible.',
+        {images: img.blob, modelTier: "quick"});
+      if (!o || (!o.name && !o.model && !o.email)) throw {code:"empty"};
+      applyFields(o); viaClaude = true;
+      const got = ["name","email","model","masterCode","otherCode","salesperson"].filter(k => o[k]).length;
+      shotMsg(`✓ Claude อ่านข้อมูลแล้ว (${got} ช่อง) ตรวจในข้อ 2 และกล่องตรวจข้อมูลอีกครั้งก่อนส่ง`, "ok");
+    } catch(e){
+      const c = e?.code;
+      if (c === "rate_limited"){ shotMsg("ใช้งานถี่เกินไป รอสักครู่แล้วลองใหม่", "warn"); shotBusy = false; return; }
+      if (c === "images_unavailable" || c === "not_granted" || c === "capability_disabled") claudeImagesOff = true;
+      // anything else: fall through to on-device OCR
+    }
+  }
+  if (!viaClaude){
+    try {
+      const o = await readWithOCR(file);
+      if (!o.name && !o.model && !o.email) throw {code:"empty"};
+      applyFields(o);
+      const got = ["name","email","model","otherCode","salesperson"].filter(k => o[k]).length;
+      shotMsg(`✓ อ่านด้วย OCR แล้ว (${got} ช่อง) · OCR อาจอ่านตัวสะกดผิด โดยเฉพาะชื่อภาษาไทย ตรวจในข้อ 2 และกล่องตรวจข้อมูลก่อนส่ง`, "ok");
+    } catch(e){
+      shotMsg(e?.code === "empty"
+        ? "อ่านรูปแล้วแต่ไม่พบหัวข้อของฟอร์ม · ลองแคปให้เห็นทั้งหัวข้อและข้อมูลชัดๆ หรือพิมพ์ในข้อ 2"
+        : "อ่านรูปไม่สำเร็จ (" + (e?.message || e?.code || "unknown") + ") · ใช้ “วางข้อความจากฟอร์ม” หรือพิมพ์ในข้อ 2 แทน", "err");
+    }
+  }
+  shotBusy = false;
+}
+wireDrop($("shotDrop"), $("shotFile"), readShot);
+// ⌘/Ctrl+V anywhere on the page: an image goes to Claude; text copied from the form fills the fields
+document.addEventListener("paste", e => {
+  const items = [...(e.clipboardData?.items||[])];
+  const imgItem = items.find(i => i.kind === "file" && (i.type.startsWith("image/") || isImageFile(i.getAsFile())));
+  const inField = e.target.closest && e.target.closest("input,textarea");
+  if (imgItem){ e.preventDefault(); readShot(imgItem.getAsFile()); return; }
+  if (inField) return;
+  const t = e.clipboardData?.getData("text/plain") || "";
+  if (t.trim()){
+    const o = parseText(t);
+    if (o.name || o.model){ e.preventDefault(); applyFields(o); shotMsg("✓ อ่านข้อความที่วางแล้ว ตรวจข้อมูลอีกครั้งก่อนส่ง", "ok"); }
+    else shotMsg("ข้อความที่วางไม่มีหัวข้อ Name / Model ของฟอร์ม · ถ้าเป็นรูป ให้แคปหน้าจอแล้ววางใหม่", "warn");
+  }
+});
+
+// ---------- form state ----------
+function syncSeg(){
+  document.querySelectorAll(".seg button[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === S.lang)));
+  document.querySelectorAll(".seg button[data-visit]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.visit === S.visit)));
+  $("visitHint").textContent = `ในจดหมาย: “Thank you for ${S.visit} NGG Timepieces boutique on …”`;
+}
+document.querySelectorAll(".seg button[data-lang]").forEach(b => b.onclick = () => { S.lang = b.dataset.lang; syncSeg(); render(); });
+document.querySelectorAll(".seg button[data-visit]").forEach(b => b.onclick = () => { S.visit = b.dataset.visit; syncSeg(); render(); });
+function syncOther(){ $("otherSales").hidden = $("sales").value !== "other"; }
+$("sales").innerHTML = SALESPEOPLE.map((p,i)=>`<option value="${i}">${p.th} · ${p.en}</option>`).join("") + `<option value="other">คนอื่น (พิมพ์ชื่อเอง)</option>`;
+$("salesName").addEventListener("input", () => $("salesName").classList.toggle("needfill", !$("salesName").value.trim()));
+$("sales").onchange = () => { if ($("sales").value !== "other") clearNeedFill(); else if (!$("salesName").value.trim()) markNeedFill();  syncOther(); try { localStorage.setItem("ngg-sales", $("sales").value); } catch(e){} render(); };
+["name","model","ref","date","salesName","email","mobile"].forEach(id => $(id).addEventListener("input", () => { if (id==="name"||id==="model"||id==="ref") $("sampleChip").hidden = true; if (id==="ref") syncMatch(); else render(); }));
+$("form").addEventListener("submit", e => e.preventDefault());
+
+// search the model page on rolex.com for the code in the Reference field (opens Google in a new tab)
+$("rolexSearch").onclick = () => {
+  let c = $("ref").value.trim().toLowerCase().replace(/\s+/g, "");
+  if (!c){ setStatus("ใส่รหัสนาฬิกาในช่อง Reference ก่อน แล้วจึงค้นหาบน rolex.com", "warn"); $("ref").focus(); return; }
+  if (/^\d/.test(c)) c = "m" + c;   // rolex.com URLs use the m-prefixed code, e.g. m124270-0001
+  window.open("https://www.google.com/search?q=" + encodeURIComponent("site:rolex.com/th-th " + c), "_blank", "noopener");
+};
+
+// example so the first view shows a finished letter
+const todayISO = () => new Date(Date.now() - new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
+function defaultSales(){
+  $("sales").value = "0";
+  try { const v = localStorage.getItem("ngg-sales"); if (v !== null && [...$("sales").options].some(o=>o.value===v)) $("sales").value = v; } catch(e){}
+}
+// start empty: grey placeholders in the fields, pink on what still needs filling
+$("date").value = todayISO(); defaultSales(); syncOther(); syncSeg();
+
+// clear everything about the current customer and start a new letter
+$("resetBtn").onclick = () => {
+  ["name","email","mobile","model","ref","salesName","pasteText"].forEach(id => $(id).value = "");
+  $("date").value = todayISO(); S.lang = "auto"; S.visit = "visiting"; S.salesRaw = ""; S.armed = null;
+  defaultSales(); clearNeedFill(); syncOther(); syncSeg();
+  L.off.clear(); L.localFor = null; L.loadedKey = null;
+  $("shotZoom").hidden = true; $("shotPreview").removeAttribute("src"); shotMsg("");
+  $("sampleChip").hidden = true; setStatus("ล้างข้อมูลแล้ว วางภาพหน้าจอหรือกรอกข้อมูลลูกค้าคนใหม่ได้เลย", "ok");
+  syncMatch(); $("name").focus();
+};
+
+const logo = new Image(); logo.onload = () => { S.logo = logo; render(); }; logo.src = LOGO_SRC;
+const fontsReady = Promise.all([
+  '400 15px Arimo','700 15px Arimo','400 15px Tinos','700 15px Tinos','400 15px "Noto Sans Thai"','700 15px "Noto Sans Thai"'
+].map(f => document.fonts.load(f, "Aaกขคุ์"))).catch(()=>{}).then(() => document.fonts.ready);
+render(); fontsReady.then(render);
+</script>
+</body>
+</html>
